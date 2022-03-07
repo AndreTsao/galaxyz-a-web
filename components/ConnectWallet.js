@@ -28,7 +28,7 @@ let web3ModelInstance;
 if (typeof window !== "undefined") {
   web3ModelInstance = new Web3Modal({
     network: process.env.NEXT_PUBLIC_CHAIN_ID === "1" ? "mainnet" : "rinkeby",
-    cacheProvider: true,
+    cacheProvider: true,//？？？？
     providerOptions,
   });
 }
@@ -86,7 +86,7 @@ function ConnectWallet(props) {
     if (addressInStore) {
       setAddress(addressInStore);
     }
-    subscribe("address", () => {
+    subscribe("address", () => {//??
       const addressInStore = get("address") || null;
       setAddress(addressInStore);
     });
@@ -115,20 +115,20 @@ function ConnectWallet(props) {
         color="primary"
         onClick={async () => {
           setLoading(true);
-          try {
+          try {// !!!与钱包链接逻辑
             const { provider, signer, web3Instance } = await connectWallet();
             const address = await signer.getAddress();
-            const ens = await provider.lookupAddress(address);
+            const ens = await provider.lookupAddress(address);//域名解析
             setAddress(ens || formatAddress(address));
             set("address", ens || formatAddress(address));
             set("fullAddress", address);
             web3Instance.on("accountsChanged", async (accounts) => {
-              if (accounts.length === 0) {
+              if (accounts.length === 0) {//断开钱包链接
                 await disconnectWallet();
                 set("address", "");
                 set("fullAddress", "");
                 setAddress(null);
-              } else {
+              } else {//链接钱包
                 const address = accounts[0];
                 const ens = await provider.lookupAddress(address);
                 setAddress(ens || formatAddress(address));
