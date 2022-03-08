@@ -110,7 +110,7 @@ function MintSection() {
   const [fullAddress, setFullAddress] = useState(null);
   const [numberMinted, setNumberMinted] = useState(0);
 
-  async function updateStatus() {
+  async function updateStatus() {//？？？？？
     const { contract } = await connectWallet();
     const status = await contract.status();
     const progress = parseInt(await contract.totalSupply());

@@ -35,7 +35,7 @@ if (typeof window !== "undefined") {
 
 let provider;
 let signer;
-let instance;
+let instance;//web3ModelInstance
 let contract;
 
 export async function connectWallet() {
@@ -77,6 +77,12 @@ const NoCollectWallet = styled.div`
   }
 `;
 
+
+/****
+ * 链接钱包的component
+ * 3种数据来源  state LocalStorage web3ModelInstance
+ *  state LocalStorage 的数据要一致  web3ModelInstance实例要清除干净
+ */
 function ConnectWallet(props) {
   const [address, setAddress] = useState(null);
   const [loading, setLoading] = useState(false);
