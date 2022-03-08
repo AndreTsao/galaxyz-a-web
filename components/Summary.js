@@ -41,17 +41,21 @@ function Summary() {
     >
       <Typography style={{ textAlign: "center" }}>
         最后，{" "}
-        <span
-          style={{
-            borderBottom: "2px dashed #5383b2",
-            color: "#5383b2",
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            setOpen(true);
-          }}
-        >
-          真心
+        <span>
+          <span
+            style={{
+              borderBottom: "2px dashed #5383b2",
+              color: "#5383b2",
+              cursor: "pointer",
+              fontSize: 100,
+            }}
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
+            真心
+          </span>
+          <span>（点击真心有彩蛋啊！！）</span>
         </span>
         希望这个国产良心 NFT 项目，是未来国产项目的地板水平。
       </Typography>
@@ -140,9 +144,19 @@ function Summary() {
           <Typography style={{ marginBottom: 20 }}>
             当我们完成整个项目之后，也
             <strong>
-              将会完全开源整个项目的网站源代码、部署方式文档、合约项目代码以及图片素材等。
+              <del>
+                将会完全开源整个项目的网站源代码、部署方式文档、合约项目代码以及图片素材等。
+              </del>
             </strong>
-            并且逐步编写开发经验介绍文章等，希望可以对同行有所帮助。
+            （
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://twitter.com/gclxnft/status/1500805763404496896"
+            >
+              2022.03.08 已完成
+            </a>
+            ） 并且逐步编写开发经验介绍文章等，希望可以对同行有所帮助。
             <strong>
               所有内容将以 MIT 的开源协议开源，并不限制任何使用用途。
             </strong>
@@ -155,12 +169,26 @@ function Summary() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/brucexu-eth/gclx-official"
+              href="https://github.com/GuoChanLiangXin/gclx-official"
             >
-              https://github.com/brucexu-eth/gclx-official
+              https://github.com/GuoChanLiangXin/gclx-official
             </a>
-            <br />- 合约代码：TBA
-            <br />- 图片素材：TBA
+            <br />- 合约代码：
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/GuoChanLiangXin/gclx-contracts"
+            >
+              https://github.com/GuoChanLiangXin/gclx-contracts
+            </a>
+            <br />- 图片素材：
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/GuoChanLiangXin/gclx-art-engine"
+            >
+              https://github.com/GuoChanLiangXin/gclx-art-engine
+            </a>
           </Typography>
           <Typography style={{ marginBottom: 20 }}>
             我们希望【国产良心】NFT
