@@ -56,6 +56,7 @@ function MintButton(props) {
           const value = ethers.utils.parseEther(
             props.mintAmount === 1 ? "0.01" : "0.02"
           );
+          //调取合约mint函数
           const tx = await contractWithSigner.mint(props.mintAmount, {
             value,
           });
@@ -104,7 +105,7 @@ function MintButton(props) {
   );
 }
 
-function MintSection() {
+function MintSection() {// status？？？
   const [status, setStatus] = useState("0");
   const [progress, setProgress] = useState(null);
   const [fullAddress, setFullAddress] = useState(null);
@@ -113,6 +114,7 @@ function MintSection() {
   async function updateStatus() {//？？？？？
     const { contract } = await connectWallet();
     const status = await contract.status();
+    console.log('log---contract',await contract.status())
     const progress = parseInt(await contract.totalSupply());
     setStatus(status.toString());
     setProgress(progress);
@@ -179,8 +181,10 @@ function MintSection() {
       尚未开始
     </StyledMintButton>
   );
+  console.log('log---111')
 
   if (status === "1") {
+    console.log('log---222')
     mintButton = (
       <div
         style={{
@@ -202,6 +206,7 @@ function MintSection() {
   }
 
   if (progress >= 1000 || status === "2") {
+    console.log('log---333')
     mintButton = (
       <StyledMintButton
         style={{
@@ -216,6 +221,7 @@ function MintSection() {
   }
 
   if (numberMinted === 2) {
+    console.log('log---444')
     mintButton = (
       <StyledMintButton
         style={{
@@ -243,17 +249,17 @@ function MintSection() {
     );
   }
 
-  mintButton = (
-    <StyledMintButton
-      style={{
-        background: "#eee",
-        color: "#999",
-        cursor: "not-allowed",
-      }}
-    >
-      全部卖完了
-    </StyledMintButton>
-  );
+  // mintButton = (
+  //   <StyledMintButton
+  //     style={{
+  //       background: "#eee",
+  //       color: "#999",
+  //       cursor: "not-allowed",
+  //     }}
+  //   >
+  //     全部卖完了
+  //   </StyledMintButton>
+  // );
 
   return (
     <div

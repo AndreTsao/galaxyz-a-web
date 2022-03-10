@@ -50,11 +50,11 @@ export default function Home() {
         />
       </Head>
       <Intro />
-      <Gallery />
-      <Roadmap />
-      <Whitelist />
-      <FAQ />
-      <Team />
+      {/*<Gallery />*/}
+      {/*<Roadmap />*/}
+      {/*<Whitelist />*/}
+      {/*<FAQ />*/}
+      {/*<Team />*/}
       <Mint />
       <Summary />
     </div>
