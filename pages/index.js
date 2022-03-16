@@ -27,8 +27,8 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>国产良心 NFT - 全宇宙限量 1000 的中国国产良心 NFT！</title>
-        <meta name="description" content="中国人不骗中国人，放心！" />
+        <title>Botty NFT - Enter metaverse hand in hand！</title>
+        <meta name="description" content="The limit is 1000" />
         <link rel="icon" href="/favicon.png" />
 
         {/* Global Site Tag (gtag.js) - Google Analytics */}
@@ -50,11 +50,11 @@ export default function Home() {
         />
       </Head>
       <Intro />
-      {/*<Gallery />*/}
-      {/*<Roadmap />*/}
-      {/*<Whitelist />*/}
-      {/*<FAQ />*/}
-      {/*<Team />*/}
+      <Gallery />
+      <Roadmap />
+      <Whitelist />
+      <FAQ />
+      <Team />
       <Mint />
       <Summary />
     </div>

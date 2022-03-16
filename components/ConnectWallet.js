@@ -157,13 +157,13 @@ function ConnectWallet(props) {
           setLoading(false);
         }}
       />
-      {props.showCollect && (
-        <NoCollectWallet>
-          我们不用
-          <br />
-          <span style={{ textDecoration: "line-through" }}>Collect Wallet</span>
-        </NoCollectWallet>
-      )}
+      {/*{props.showCollect && (*/}
+      {/*  <NoCollectWallet>*/}
+      {/*    我们不用*/}
+      {/*    <br />*/}
+      {/*    <span style={{ textDecoration: "line-through" }}>Collect Wallet</span>*/}
+      {/*  </NoCollectWallet>*/}
+      {/*)}*/}
     </div>
   );
 }

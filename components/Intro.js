@@ -73,12 +73,12 @@ function Intro() {
       id="intro"
     >
       <Head>
-        <h1>国产良心 NFT</h1>
+        <h1>Botty NFT</h1>
         <MenuWrapper>
           <MenuItem elementId="intro">介绍</MenuItem>
-          <MenuItem elementId="roadmap">发展路线</MenuItem>
-          <MenuItem elementId="faq">问与答</MenuItem>
-          <MenuItem elementId="team">项目成员</MenuItem>
+          <MenuItem elementId="roadmap">Roadmap</MenuItem>
+          <MenuItem elementId="faq">F.A.Q</MenuItem>
+          <MenuItem elementId="team">Team</MenuItem>
         </MenuWrapper>
         <ConnectWallet showCollect={true} />
       </Head>
@@ -113,7 +113,7 @@ function Intro() {
             padding: "40px 0",
           }}
         >
-          <Tooltip title="官方 OpenSea">
+          <Tooltip title="Botty OpenSea">
             <a
               href="https://opensea.io/collection/gclx"
               target="_blank"
@@ -129,7 +129,7 @@ function Intro() {
               />
             </a>
           </Tooltip>
-          <Tooltip title="官方 LooksRare">
+          <Tooltip title="Botty LooksRare">
             <a
               href="https://looksrare.org/zh_hans/collections/0xBf66f2d9630A033022602c3279b04b4a37399927"
               target="_blank"
@@ -145,7 +145,7 @@ function Intro() {
               />
             </a>
           </Tooltip>
-          <Tooltip title="官方 Twitter">
+          <Tooltip title="Botty Twitter">
             <a
               href="https://twitter.com/gclxnft"
               target="_blank"
