@@ -76,9 +76,8 @@ function Intro() {
         <h1>Botty NFT</h1>
         <MenuWrapper>
           <MenuItem elementId="intro">介绍</MenuItem>
-          <MenuItem elementId="roadmap">Roadmap</MenuItem>
+          <MenuItem elementId="roadmap">About</MenuItem>
           <MenuItem elementId="faq">F.A.Q</MenuItem>
-          <MenuItem elementId="team">Team</MenuItem>
         </MenuWrapper>
         <ConnectWallet showCollect={true} />
       </Head>
