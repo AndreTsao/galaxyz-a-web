@@ -8,6 +8,13 @@ import Container from "./Container";
 import ConnectWallet, { connectWallet } from "./ConnectWallet";
 import showMessage from "./showMessage";
 
+
+const CONTRACT_PUBLIC_LIMITED_NUMBER= 10;
+const CONTRACT_STATUS_OFF= "0";
+const CONTRACT_STATUS_ON= "1";
+const CONTRACT_STATUS_SOLD_OUT= "2";
+const CONTRACT_NFT_TOTAL_AMOUNT= 1000;
+
 const ETHERSCAN_DOMAIN =
   process.env.NEXT_PUBLIC_CHAIN_ID === "1"
     ? "etherscan.io"
@@ -23,7 +30,7 @@ const Content = styled.div`
 
 const StyledMintButton = styled.div`
   display: inline-block;
-  width: 140px;
+  width: 180px;
   text-align: center;
   padding: 10px 10px;
   border: 4px solid #000;
@@ -106,14 +113,14 @@ function MintButton(props) {
 }
 
 function MintSection() {// status？？？
-  const [status, setStatus] = useState("0");
+  const [status, setStatus] = useState(CONTRACT_STATUS_OFF);//contract.status
   const [progress, setProgress] = useState(null);
   const [fullAddress, setFullAddress] = useState(null);
   const [numberMinted, setNumberMinted] = useState(0);
 
   async function updateStatus() {//？？？？？
     const { contract } = await connectWallet();
-    const status = await contract.status();
+    const status = await contract.status();//
     console.log('log---contract',await contract.status())
     const progress = parseInt(await contract.totalSupply());
     setStatus(status.toString());
@@ -181,9 +188,8 @@ function MintSection() {// status？？？
       Not yet started
     </StyledMintButton>
   );
-  console.log('log---111')
 
-  if (status === "1") {
+  if (status === CONTRACT_STATUS_ON) {
     console.log('log---222')
     mintButton = (
       <div
@@ -196,6 +202,13 @@ function MintSection() {// status？？？
           mintAmount={1}
           style={{ marginRight: "20px" }}
         />
+        <Typography
+          style={{ textAlign: "center"}}
+          variant="h3"
+          component="div"
+        >
+          {numberMinted}
+        </Typography>
         <MintButton
           onMinted={refreshStatus}
           mintAmount={2}
@@ -205,7 +218,7 @@ function MintSection() {// status？？？
     );
   }
 
-  if (progress >= 1000 || status === "2") {
+  if (progress >= 1000 || status === CONTRACT_STATUS_SOLD_OUT) {
     console.log('log---333')
     mintButton = (
       <StyledMintButton
@@ -215,12 +228,12 @@ function MintSection() {// status？？？
           cursor: "not-allowed",
         }}
       >
-        全部卖完了
+        Sold Out
       </StyledMintButton>
     );
   }
 
-  if (numberMinted === 2) {
+  if (numberMinted >= CONTRACT_PUBLIC_LIMITED_NUMBER) {
     console.log('log---444')
     mintButton = (
       <StyledMintButton
@@ -249,18 +262,6 @@ function MintSection() {// status？？？
     );
   }
 
-  // mintButton = (
-  //   <StyledMintButton
-  //     style={{
-  //       background: "#eee",
-  //       color: "#999",
-  //       cursor: "not-allowed",
-  //     }}
-  //   >
-  //     全部卖完了
-  //   </StyledMintButton>
-  // );
-
   return (
     <div
       style={{
@@ -269,31 +270,20 @@ function MintSection() {// status？？？
         alignItems: "center",
       }}
     >
-      <div style={{ marginBottom: 20, display: "flex", alignItems: "center" }}>
-        您的钱包： <ConnectWallet />{" "}
+      <div style={{ marginBottom: 120, display: "flex", alignItems: "center" }}>
+        Your wallet: <ConnectWallet />{" "}
         {fullAddress && (
           <span style={{ marginLeft: 10 }}>
-            可以铸造 {2 - numberMinted} 个。
+            can mint {CONTRACT_PUBLIC_LIMITED_NUMBER - numberMinted} Botties
           </span>
         )}
       </div>
       {mintButton}
-      <div style={{ marginTop: 10 }}>
-        请移步在{" "}
-        <a
-          href="https://opensea.io/collection/gclx"
-          target="_blank"
-          rel="noreferrer"
-        >
-          OpenSea
-        </a>{" "}
-        上查看。
-      </div>
-      <div style={{ marginTop: 20, fontSize: 20, textAlign: "center" }}>
-        铸造进度：{progress === null ? "请先连接钱包" : progress} / 1000，价格
-        0.01 ETH 一个，每个钱包最多 2 个，每人每天 2 个钱包。
+      <div style={{ marginTop: 120, fontSize: 25, textAlign: "center" }}>
+        Minted：{progress === null ? "Please connect wallet" : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}，价格
+        0.002 ETH 一个，每个钱包最多 10 个.
         <br />
-        今天，我们都是良心铸造人！
+        Go
       </div>
     </div>
   );
@@ -303,7 +293,7 @@ function Mint() {
   return (
     <Container
       style={{
-        background: "#5383b2",
+        background: "#175C5B",
         color: "#fff",
       }}
       id="mint"
@@ -314,7 +304,7 @@ function Mint() {
         gutterBottom
         component="div"
       >
-        铸造（Mint）
+        B o t t y
       </Typography>
 
       <Content>
@@ -326,9 +316,7 @@ function Mint() {
           variant="body1"
           gutterBottom
         >
-          您好我的朋友，有没有觉得这个国产良心 NFT
-          项目网站跟别的项目不太一样？上面废话特别多，Mint
-          的按钮和方法一直找不到？
+          Nice to mint you !
         </Typography>
         <div
           style={{
@@ -340,31 +328,6 @@ function Mint() {
         >
           <MintSection />
         </div>
-        <Typography
-          style={{
-            marginTop: 30,
-            textAlign: "center",
-          }}
-          variant="body2"
-          gutterBottom
-        >
-          铸造成功之后，您可以选择加入国产良心 NFT
-          会员频道，不过项目团队不会在里面做管理或者组织什么事情。
-          <br />
-          为了节约时间，经过和 NextDAO 的沟通，我们将会员频道设立在了 NextDAO 的
-          Discord 里面。
-          <br />
-          您可以加入 NextDAO 的 Discord （
-          <a
-            style={{ color: "#fff" }}
-            href="https://discord.gg/NextDAO"
-            target="_blank"
-            rel="noreferrer"
-          >
-            https://discord.gg/NextDAO
-          </a>
-          ） 并链接钱包验证身份，之后即可看到会员频道。
-        </Typography>
       </Content>
     </Container>
   );

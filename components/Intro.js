@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
 
 import Container from "./Container";
@@ -72,7 +71,7 @@ function Intro() {
         <h1>Botty NFT</h1>
         <MenuWrapper>
           <MenuItem elementId="intro">介绍</MenuItem>
-          <MenuItem elementId="roadmap">About</MenuItem>
+          <MenuItem elementId="gallery">About</MenuItem>
           <MenuItem elementId="faq">F.A.Q</MenuItem>
         </MenuWrapper>
         <Tooltip title="OpenSea">

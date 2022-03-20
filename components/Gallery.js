@@ -58,6 +58,7 @@ function Gallery() {
       style={{
         background: "#fff",
       }}
+      id="gallery"
     >
       <Typography
         style={{ textAlign: "center", marginTop: "5%" }}
