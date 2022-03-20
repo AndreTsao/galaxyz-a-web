@@ -56,14 +56,14 @@ function MintButton(props) {
           const value = ethers.utils.parseEther(
             props.mintAmount === 1 ? "0.01" : "0.02"
           );
-          //调取合约mint函数
+          //call contract to mint
           const tx = await contractWithSigner.mint(props.mintAmount, {
             value,
           });
           const response = await tx.wait();
           showMessage({
             type: "success",
-            title: "铸造成功",
+            title: "NFTs were minted successfully",
             body: (
               <div>
                 <a
@@ -71,15 +71,15 @@ function MintButton(props) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  点击查看交易详情
+                  Click to view transaction details
                 </a>{" "}
-                或者到{" "}
+                or go to{" "}
                 <a
                   href="https://opensea.io/account"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  OpenSea 查看
+                  OpenSea
                 </a>
                 。
               </div>
@@ -88,7 +88,7 @@ function MintButton(props) {
         } catch (err) {
           showMessage({
             type: "error",
-            title: "铸造失败",
+            title: "NFTs were minted failed",
             body: err.message,
           });
         }
@@ -100,7 +100,7 @@ function MintButton(props) {
         ...props.style,
       }}
     >
-      铸造 {props.mintAmount} 个{minting ? "中..." : ""}
+      mint{props.mintAmount} 个{minting ? "ing..." : ""}
     </StyledMintButton>
   );
 }
@@ -158,7 +158,7 @@ function MintSection() {// status？？？
     } catch (err) {
       showMessage({
         type: "error",
-        title: "获取合约状态失败",
+        title: "Failed to get contract status",
         body: err.message,
       });
     }
@@ -178,7 +178,7 @@ function MintSection() {// status？？？
         cursor: "not-allowed",
       }}
     >
-      尚未开始
+      Not yet started
     </StyledMintButton>
   );
   console.log('log---111')
@@ -244,7 +244,7 @@ function MintSection() {// status？？？
           cursor: "not-allowed",
         }}
       >
-        请先连接钱包
+        Connect Wallet
       </StyledMintButton>
     );
   }
@@ -330,29 +330,6 @@ function Mint() {
           项目网站跟别的项目不太一样？上面废话特别多，Mint
           的按钮和方法一直找不到？
         </Typography>
-        <Typography
-          style={{
-            marginTop: 30,
-            textAlign: "center",
-          }}
-          variant="body1"
-          gutterBottom
-        >
-          这并非因为我们不懂用户体验，相反，我们希望您在参与任何一个项目的时候，都能认真研究项目背后的团队、理念、发展路线和风险。不要
-          FOMO 也不要 FUD，要理性的决定自己是否要参与这个项目！
-        </Typography>
-        <Typography
-          style={{
-            marginTop: 30,
-            textAlign: "center",
-          }}
-          variant="body1"
-          gutterBottom
-        >
-          相信通过上面的资料，相信您已经充分了解了我们国产良心 NFT
-          项目。在您做好充分的思想准备之后，可以选择点击下面铸造（Mint）按钮进行铸造。
-        </Typography>
-
         <div
           style={{
             marginTop: 60,
@@ -363,14 +340,6 @@ function Mint() {
         >
           <MintSection />
         </div>
-        <Typography
-          style={{ textAlign: "center", marginTop: "8%" }}
-          variant="h5"
-          gutterBottom
-          component="div"
-        >
-          铸造之后
-        </Typography>
         <Typography
           style={{
             marginTop: 30,
