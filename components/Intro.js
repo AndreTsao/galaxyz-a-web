@@ -58,11 +58,7 @@ const Content = styled.div`
   text-align: center;
   padding-bottom: 60px;
 `;
-const ContentImage = styled.div`
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
-`;
+
 
 function Intro() {
   return (
@@ -79,100 +75,54 @@ function Intro() {
           <MenuItem elementId="roadmap">About</MenuItem>
           <MenuItem elementId="faq">F.A.Q</MenuItem>
         </MenuWrapper>
+        <Tooltip title="OpenSea">
+          <a
+            href="https://opensea.io/collection/gclx"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              style={{
+                cursor: "pointer",
+                width: 40,
+                marginRight: "40px",
+              }}
+              src="/icons/opensea.svg"
+            />
+          </a>
+        </Tooltip>
+        <Tooltip title="LooksRare">
+          <a
+            href="https://looksrare.org/zh_hans/collections/0xBf66f2d9630A033022602c3279b04b4a37399927"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              style={{
+                cursor: "pointer",
+                width: 40,
+                marginRight: "40px",
+              }}
+              src="/icons/looksrare.png"
+            />
+          </a>
+        </Tooltip>
+        <Tooltip title="Twitter">
+          <a
+            href="https://twitter.com/gclxnft"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              style={{
+                width: 40,
+              }}
+              src="/icons/twitter.svg"
+            />
+          </a>
+        </Tooltip>
         <ConnectWallet showCollect={true} />
       </Head>
-      <Content>
-        <ContentImage>
-          <img style={{ width: 200 }} src="/images/demo.gif" />
-        </ContentImage>
-        <Typography
-          style={{
-            marginTop: "8.3333333%",
-          }}
-          variant="body1"
-          gutterBottom
-        >
-          尊贵且独一无二的限量 1000 份【国产良心】NFT，专为中国人准备！
-        </Typography>
-        <Typography
-          style={{
-            marginTop: "2%",
-          }}
-          variant="body1"
-          gutterBottom
-        >
-          请放心参与，咱中国人不骗中国人{" "}
-          <img
-            style={{ width: 36, position: "relative", top: 5 }}
-            src="/icons/doge.png"
-          />
-        </Typography>
-        <div
-          style={{
-            padding: "40px 0",
-          }}
-        >
-          <Tooltip title="Botty OpenSea">
-            <a
-              href="https://opensea.io/collection/gclx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                style={{
-                  cursor: "pointer",
-                  width: 40,
-                  marginRight: "40px",
-                }}
-                src="/icons/opensea.svg"
-              />
-            </a>
-          </Tooltip>
-          <Tooltip title="Botty LooksRare">
-            <a
-              href="https://looksrare.org/zh_hans/collections/0xBf66f2d9630A033022602c3279b04b4a37399927"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                style={{
-                  cursor: "pointer",
-                  width: 40,
-                  marginRight: "40px",
-                }}
-                src="/icons/looksrare.png"
-              />
-            </a>
-          </Tooltip>
-          <Tooltip title="Botty Twitter">
-            <a
-              href="https://twitter.com/gclxnft"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                style={{
-                  width: 40,
-                }}
-                src="/icons/twitter.svg"
-              />
-            </a>
-          </Tooltip>
-        </div>
-        <Typography
-          style={{
-            marginTop: "5%",
-            textAlign: "center",
-            color: "#666",
-            maxWidth: "600px",
-          }}
-          variant="body2"
-          gutterBottom
-        >
-          我们不与国际接轨。We DO NOT provide an English version for English
-          speakers, please consider learning Chinese or using Google Translate.
-        </Typography>
-      </Content>
     </Container>
   );
 }
