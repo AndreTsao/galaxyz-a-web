@@ -9,11 +9,13 @@ import ConnectWallet, { connectWallet } from "./ConnectWallet";
 import showMessage from "./showMessage";
 
 
-const CONTRACT_PUBLIC_LIMITED_NUMBER= 10;
-const CONTRACT_STATUS_OFF= "0";
-const CONTRACT_STATUS_ON= "1";
-const CONTRACT_STATUS_SOLD_OUT= "2";
+const CONTRACT_PERWALLET_MAX_MINT_AMOUNT= 10;
 const CONTRACT_NFT_TOTAL_AMOUNT= 1000;
+const CONTRACT_STATUS = {
+  'OFF': '0',
+  'ON': '1',
+  'SOLD_OUT': '2',
+}
 
 const ETHERSCAN_DOMAIN =
   process.env.NEXT_PUBLIC_CHAIN_ID === "1"
@@ -112,23 +114,22 @@ function MintButton(props) {
   );
 }
 
-function MintSection() {// status？？？
-  const [status, setStatus] = useState(CONTRACT_STATUS_OFF);//contract.status
-  const [progress, setProgress] = useState(null);
+function MintSection() {
+  const [status, setStatus] = useState(CONTRACT_STATUS.OFF);//contract.status
+  const [progress, setProgress] = useState(null);//已经mint的数量
   const [fullAddress, setFullAddress] = useState(null);
-  const [numberMinted, setNumberMinted] = useState(0);
+  const [numberMinted, setNumberMinted] = useState(0);//某地址已经minted的数量
 
-  async function updateStatus() {//？？？？？
+  async function updateStatus() {//更新status和已经mint的数量  这是mint逻辑的第一个控制条件
     const { contract } = await connectWallet();
     const status = await contract.status();//
-    console.log('log---contract',await contract.status())
     const progress = parseInt(await contract.totalSupply());
     setStatus(status.toString());
     setProgress(progress);
     // 在 mint 事件的时候更新数据
     contract.on("Minted", async (event) => {
       const status = await contract.status();
-      const progress = parseInt(await contract.totalSupply());
+      const progress = parseInt(await contract.totalSupply());//已经mint的数量
       setStatus(status.toString());
       setProgress(progress);
     });
@@ -136,7 +137,7 @@ function MintSection() {// status？？？
 
   useEffect(() => {
     (async () => {
-      const fullAddressInStore = get("fullAddress") || null;
+      const fullAddressInStore = get("fullAddress") || null;//从持久化存储中获取
       if (fullAddressInStore) {
         const { contract } = await connectWallet();
         const numberMinted = await contract.numberMinted(fullAddressInStore);
@@ -189,8 +190,7 @@ function MintSection() {// status？？？
     </StyledMintButton>
   );
 
-  if (status === CONTRACT_STATUS_ON) {
-    console.log('log---222')
+  if (status === CONTRACT_STATUS.ON) {
     mintButton = (
       <div
         style={{
@@ -218,8 +218,7 @@ function MintSection() {// status？？？
     );
   }
 
-  if (progress >= 1000 || status === CONTRACT_STATUS_SOLD_OUT) {
-    console.log('log---333')
+  if (progress >= CONTRACT_NFT_TOTAL_AMOUNT || status === CONTRACT_STATUS.SOLD_OUT) {
     mintButton = (
       <StyledMintButton
         style={{
@@ -233,7 +232,7 @@ function MintSection() {// status？？？
     );
   }
 
-  if (numberMinted >= CONTRACT_PUBLIC_LIMITED_NUMBER) {
+  if (numberMinted >= CONTRACT_PERWALLET_MAX_MINT_AMOUNT) {
     console.log('log---444')
     mintButton = (
       <StyledMintButton
@@ -274,7 +273,7 @@ function MintSection() {// status？？？
         Your wallet: <ConnectWallet />{" "}
         {fullAddress && (
           <span style={{ marginLeft: 10 }}>
-            can mint {CONTRACT_PUBLIC_LIMITED_NUMBER - numberMinted} Botties
+            can mint {CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted} Botties
           </span>
         )}
       </div>
