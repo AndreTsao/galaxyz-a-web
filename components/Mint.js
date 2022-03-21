@@ -7,10 +7,12 @@ import { get, subscribe } from "../store";
 import Container from "./Container";
 import ConnectWallet, { connectWallet } from "./ConnectWallet";
 import showMessage from "./showMessage";
+import BigNumber from "bignumber.js";
 
 
 const CONTRACT_PERWALLET_MAX_MINT_AMOUNT= 10;
 const CONTRACT_NFT_TOTAL_AMOUNT= 1000;
+const CONTRACT_NFT_PER_PRICE= 0.002;
 const CONTRACT_STATUS = {
   'OFF': '0',
   'ON': '1',
@@ -62,8 +64,8 @@ function MintButton(props) {
         try {
           const { signer, contract } = await connectWallet();
           const contractWithSigner = contract.connect(signer);
-          const value = ethers.utils.parseEther(
-            props.wantMintAmount === 1 ? "0.01" : "0.02"
+          const value = ethers.utils.parseEther(/////
+            new BigNumber(props.wantMintAmount).multipliedBy(new BigNumber(CONTRACT_NFT_PER_PRICE)).toString()
           );
           //call contract to mint
           const tx = await contractWithSigner.mint(props.wantMintAmount, {
