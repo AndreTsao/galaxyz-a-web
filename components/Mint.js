@@ -119,6 +119,7 @@ function MintSection() {
   const [progress, setProgress] = useState(null);//已经mint的数量
   const [fullAddress, setFullAddress] = useState(null);
   const [numberMinted, setNumberMinted] = useState(0);//某地址已经minted的数量
+  const [wantNumberMinted, setWantNumberMinted] = useState(0);//点击选择mint的数量
 
   async function updateStatus() {//更新status和已经mint的数量  这是mint逻辑的第一个控制条件
     const { contract } = await connectWallet();
@@ -157,7 +158,7 @@ function MintSection() {
     })();
   }, []);
 
-  useEffect(() => {
+  useEffect(() => {//？？？？
     try {
       const fullAddressInStore = get("fullAddress") || null;
       if (fullAddressInStore) {
@@ -202,18 +203,6 @@ function MintSection() {
           mintAmount={1}
           style={{ marginRight: "20px" }}
         />
-        <Typography
-          style={{ textAlign: "center"}}
-          variant="h3"
-          component="div"
-        >
-          {numberMinted}
-        </Typography>
-        <MintButton
-          onMinted={refreshStatus}
-          mintAmount={2}
-          disabled={numberMinted === 1}
-        />
       </div>
     );
   }
@@ -233,7 +222,6 @@ function MintSection() {
   }
 
   if (numberMinted >= CONTRACT_PERWALLET_MAX_MINT_AMOUNT) {
-    console.log('log---444')
     mintButton = (
       <StyledMintButton
         style={{
@@ -242,12 +230,12 @@ function MintSection() {
           cursor: "not-allowed",
         }}
       >
-        铸造已达上限
+        You have reached the maximum mint number
       </StyledMintButton>
     );
   }
 
-  if (!fullAddress) {
+  if (!fullAddress) {//没有连接钱包时卡住mint按钮
     mintButton = (
       <StyledMintButton
         style={{
@@ -276,6 +264,51 @@ function MintSection() {
             can mint {CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted} Botties
           </span>
         )}
+      </div>
+      <div style={{
+        display: "flex",
+        alignItems:"center"
+      }}>
+        <img
+          style={{
+            cursor: "pointer",
+            width: 60,
+            height: 60,
+            marginRight: "40px",
+          }}
+          src="/images/minus.png"
+          onClick={()=>{
+            if(wantNumberMinted <=0){
+              setWantNumberMinted(0)
+              return;
+            }
+            setWantNumberMinted(wantNumberMinted-1)
+          }}
+        />
+        <Typography
+          style={{ textAlign: "center",fontSize: 150}}
+          variant="h3"
+          component="div"
+        >
+          {wantNumberMinted}
+        </Typography>
+
+        <img
+          style={{
+            cursor: "pointer",
+            width: 60,
+            height: 60,
+            marginLeft: "40px",
+          }}
+          src="/images/plus.png"
+          onClick={()=>{
+            if(wantNumberMinted >= CONTRACT_PERWALLET_MAX_MINT_AMOUNT- numberMinted){
+              setWantNumberMinted(CONTRACT_PERWALLET_MAX_MINT_AMOUNT- numberMinted)
+              return;
+            }
+            setWantNumberMinted(wantNumberMinted+1)
+          }}
+        />
       </div>
       {mintButton}
       <div style={{ marginTop: 120, fontSize: 25, textAlign: "center" }}>
