@@ -63,10 +63,10 @@ function MintButton(props) {
           const { signer, contract } = await connectWallet();
           const contractWithSigner = contract.connect(signer);
           const value = ethers.utils.parseEther(
-            props.mintAmount === 1 ? "0.01" : "0.02"
+            props.wantMintAmount === 1 ? "0.01" : "0.02"
           );
           //call contract to mint
-          const tx = await contractWithSigner.mint(props.mintAmount, {
+          const tx = await contractWithSigner.mint(props.wantMintAmount, {
             value,
           });
           const response = await tx.wait();
@@ -109,7 +109,7 @@ function MintButton(props) {
         ...props.style,
       }}
     >
-      mint{props.mintAmount} 个{minting ? "ing..." : ""}
+      mint{props.wantMintAmount} 个{minting ? "ing..." : ""}
     </StyledMintButton>
   );
 }
@@ -119,7 +119,7 @@ function MintSection() {
   const [progress, setProgress] = useState(null);//已经mint的数量
   const [fullAddress, setFullAddress] = useState(null);
   const [numberMinted, setNumberMinted] = useState(0);//某地址已经minted的数量
-  const [wantNumberMinted, setWantNumberMinted] = useState(0);//点击选择mint的数量
+  const [wantMintAmount, setWantMintAmount] = useState(0);//点击选择mint的数量
 
   async function updateStatus() {//更新status和已经mint的数量  这是mint逻辑的第一个控制条件
     const { contract } = await connectWallet();
@@ -200,7 +200,7 @@ function MintSection() {
       >
         <MintButton
           onMinted={refreshStatus}
-          mintAmount={1}
+          wantMintAmount={wantMintAmount}
           style={{ marginRight: "20px" }}
         />
       </div>
@@ -278,19 +278,19 @@ function MintSection() {
           }}
           src="/images/minus.png"
           onClick={()=>{
-            if(wantNumberMinted <=0){
-              setWantNumberMinted(0)
+            if(wantMintAmount <=0){
+              setWantMintAmount(0)
               return;
             }
-            setWantNumberMinted(wantNumberMinted-1)
+            setWantMintAmount(wantMintAmount-1)
           }}
         />
         <Typography
-          style={{ textAlign: "center",fontSize: 150}}
+          style={{ textAlign: "center",fontSize: 150, minWidth:260}}
           variant="h3"
           component="div"
         >
-          {wantNumberMinted}
+          {wantMintAmount}
         </Typography>
 
         <img
@@ -302,11 +302,11 @@ function MintSection() {
           }}
           src="/images/plus.png"
           onClick={()=>{
-            if(wantNumberMinted >= CONTRACT_PERWALLET_MAX_MINT_AMOUNT- numberMinted){
-              setWantNumberMinted(CONTRACT_PERWALLET_MAX_MINT_AMOUNT- numberMinted)
+            if(wantMintAmount >= CONTRACT_PERWALLET_MAX_MINT_AMOUNT- numberMinted){
+              setWantMintAmount(CONTRACT_PERWALLET_MAX_MINT_AMOUNT- numberMinted)
               return;
             }
-            setWantNumberMinted(wantNumberMinted+1)
+            setWantMintAmount(wantMintAmount+1)
           }}
         />
       </div>
