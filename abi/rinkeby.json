@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "GCLX",
-  "sourceName": "contracts/GCLX.sol",
+  "contractName": "BOTTY",
+  "sourceName": "contracts/BOTTY.sol",
   "abi": [
     {
       "inputs": [
@@ -56,17 +56,7 @@
     },
     {
       "inputs": [],
-      "name": "OwnerIndexOutOfBounds",
-      "type": "error"
-    },
-    {
-      "inputs": [],
       "name": "OwnerQueryForNonexistentToken",
-      "type": "error"
-    },
-    {
-      "inputs": [],
-      "name": "TokenIndexOutOfBounds",
       "type": "error"
     },
     {
@@ -200,7 +190,7 @@
       "inputs": [
         {
           "indexed": false,
-          "internalType": "enum GCLX.Status",
+          "internalType": "enum BOTTY.Status",
           "name": "status",
           "type": "uint8"
         }
@@ -534,7 +524,7 @@
     {
       "inputs": [
         {
-          "internalType": "enum GCLX.Status",
+          "internalType": "enum BOTTY.Status",
           "name": "_status",
           "type": "uint8"
         }
@@ -549,7 +539,7 @@
       "name": "status",
       "outputs": [
         {
-          "internalType": "enum GCLX.Status",
+          "internalType": "enum BOTTY.Status",
           "name": "",
           "type": "uint8"
         }
@@ -584,49 +574,6 @@
           "internalType": "string",
           "name": "",
           "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "index",
-          "type": "uint256"
-        }
-      ],
-      "name": "tokenByIndex",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "owner",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "index",
-          "type": "uint256"
-        }
-      ],
-      "name": "tokenOfOwnerByIndex",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
         }
       ],
       "stateMutability": "view",
