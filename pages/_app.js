@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
-import { padWidth } from '../utils';
+import { padWidth } from '../widget/utils';
 
 const theme = createTheme({
   typography: {

@@ -3,13 +3,8 @@ import Tooltip from "@mui/material/Tooltip";
 
 import Container from "./Container";
 import ConnectWallet from "./ConnectWallet";
-import { padWidth } from "../utils";
-
-const SOCIAL_MEDIA_URL = {
-  'OPENSEA': 'https://opensea.io/collection/gclx',
-  'LOOKSRARE': 'https://looksrare.org/zh_hans/collections/0xBf66f2d9630A033022602c3279b04b4a37399927',
-  'TWITTER': 'https://twitter.com/gclxnft',
-}
+import { padWidth } from "../widget/utils";
+import { SOCIAL_MEDIA_URL } from "../widget/projectParam";
 
 const Head = styled.div`
   display: flex;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { padWidth } from "../utils";
+import { padWidth } from "../widget/utils";
 
 const ContainerWrapper = styled.div``;
 const Content = styled.div`

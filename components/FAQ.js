@@ -68,7 +68,7 @@ function FAQ() {
           <AccordionDetails>
             <Typography variant="body2">
               全宇宙（包括元宇宙）限量 <strong>1000</strong> 个。每个售价{" "}
-              <strong>0.01</strong> ETH。每个钱包地址可以铸造最多{" "}
+              <strong>0.002</strong> ETH。每个钱包地址可以铸造最多{" "}
               <strong>2</strong> 个。每个人每天最多 <strong>2</strong> 个钱包。
             </Typography>
           </AccordionDetails>

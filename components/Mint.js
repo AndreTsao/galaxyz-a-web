@@ -3,21 +3,19 @@ import styled from "styled-components";
 import { ethers } from "ethers";
 import Typography from "@mui/material/Typography";
 
-import { get, subscribe } from "../store";
+import { get, subscribe } from "../widget/store";
 import Container from "./Container";
 import ConnectWallet, { connectWallet } from "./ConnectWallet";
 import showMessage from "./showMessage";
 import BigNumber from "bignumber.js";
+import {
+  CONTRACT_PERWALLET_MAX_MINT_AMOUNT,
+  CONTRACT_NFT_TOTAL_AMOUNT,
+  CONTRACT_NFT_PER_PRICE,
+  CONTRACT_STATUS
+} from "../widget/projectParam";
 
 
-const CONTRACT_PERWALLET_MAX_MINT_AMOUNT= 10;
-const CONTRACT_NFT_TOTAL_AMOUNT= 1000;
-const CONTRACT_NFT_PER_PRICE= 0.002;
-const CONTRACT_STATUS = {
-  'OFF': '0',
-  'ON': '1',
-  'SOLD_OUT': '2',
-}
 
 const ETHERSCAN_DOMAIN =
   process.env.NEXT_PUBLIC_CHAIN_ID === "1"

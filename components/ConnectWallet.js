@@ -6,8 +6,8 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 import Chip from "@mui/material/Chip";
 
 import showMessage from "./showMessage";
-import { set, get, subscribe } from "../store";
-import { formatAddress, padWidth } from "../utils";
+import { set, get, subscribe } from "../widget/store";
+import { formatAddress, padWidth } from "../widget/utils";
 import RinkebyContractABI from "../abi/rinkeby.json";
 import MainnetContractABI from "../abi/mainnet.json";
 
