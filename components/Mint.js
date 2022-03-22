@@ -25,8 +25,10 @@ const ETHERSCAN_DOMAIN =
     : "rinkeby.etherscan.io";
 
 const Content = styled.div`
-  max-width: 840px;
   margin: 0 auto 5% auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   strong {
     color: red;
   }
@@ -336,7 +338,6 @@ function Mint() {
   return (
     <Container
       style={{
-        background: "#175C5B",
         color: "#fff",
       }}
       id="mint"
@@ -351,26 +352,34 @@ function Mint() {
       </Typography>
 
       <Content>
-        <Typography
+        <img
           style={{
-            marginTop: "5%",
-            textAlign: "center",
+            width: 188,
+            height: 234,
           }}
-          variant="body1"
-          gutterBottom
-        >
-          Nice to mint you !
-        </Typography>
+          src="/images/home_image1.png"
+        />
         <div
           style={{
             marginTop: 60,
             border: "4px dashed #000",
             padding: "40px",
             borderRadius: 20,
+            minWidth:740,
+            marginLeft:50,
+            marginRight:50,
+            background: "#175C5B",
           }}
         >
           <MintSection />
         </div>
+        <img
+          style={{
+            width: 118,
+            height: 71,
+          }}
+          src="/images/home_image2.png"
+        />
       </Content>
     </Container>
   );

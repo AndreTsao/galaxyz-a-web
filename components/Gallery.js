@@ -71,7 +71,7 @@ function Gallery() {
         {arts.map((art, idx) => {
           return (
             <GalleryItem key={idx}>
-              <img src={art} alt="国产良心作品展示" />
+              <img src={art} alt="Botty作品展示" />
             </GalleryItem>
           );
         })}
@@ -86,7 +86,7 @@ function Gallery() {
           variant="body1"
           gutterBottom
         >
-          1. 我们是国产良心 NFT，以上图片均为实际作品效果，
+          1. 我们是Botty NFT，以上图片均为实际作品效果，
           <strong>所见即所得</strong>
           ，我们保证开图时不会为您带来惊吓、眩晕、呕吐等不适感。
         </Typography>
@@ -99,7 +99,7 @@ function Gallery() {
           <strong>右键保存图片</strong>，请不要借贷或者卖房参与。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
-          4. 因为我们是国产良心
+          4. 因为我们是Botty
           NFT，我们非常清楚作品的艺术价值和项目的开发成本，因此我们设置了作品的
           <strong>良心价为 0.01 ETH 一个</strong>，童叟无欺。
         </Typography>
