@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Botty NFT - Enter metaverse hand in hand！</title>
+        <title>Botty NFT - Enter metaverse </title>
         <meta name="description" content="The limit is 1000" />
         <link rel="icon" href="/favicon.png" />
 

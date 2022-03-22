@@ -92,7 +92,6 @@ function MintButton(props) {
                 >
                   OpenSea
                 </a>
-                。
               </div>
             ),
           });
@@ -107,7 +106,7 @@ function MintButton(props) {
         setMinting(false);
       }}
       style={{
-        background: "#dde4b6",
+        background: "#F0CF22",
         ...props.style,
       }}
     >
@@ -269,7 +268,7 @@ function MintSection() {
       </div>
       <div style={{
         display: "flex",
-        alignItems:"center"
+        alignItems:"center",
       }}>
         <img
           style={{
@@ -311,6 +310,16 @@ function MintSection() {
             setWantMintAmount(wantMintAmount+1)
           }}
         />
+        <Typography
+          style={{ textAlign: "center",fontSize: 20,marginLeft:20,cursor: "pointer"}}
+          variant="h3"
+          component="div"
+          onClick={()=>{
+            setWantMintAmount( CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted)
+          }}
+        >
+          {"Get Max"}
+        </Typography>
       </div>
       {mintButton}
       <div style={{ marginTop: 120, fontSize: 25, textAlign: "center" }}>

@@ -5,6 +5,12 @@ import Container from "./Container";
 import ConnectWallet from "./ConnectWallet";
 import { padWidth } from "../utils";
 
+const SOCIAL_MEDIA_URL = {
+  'OPENSEA': 'https://opensea.io/collection/gclx',
+  'LOOKSRARE': 'https://looksrare.org/zh_hans/collections/0xBf66f2d9630A033022602c3279b04b4a37399927',
+  'TWITTER': 'https://twitter.com/gclxnft',
+}
+
 const Head = styled.div`
   display: flex;
   justify-content: space-between;
@@ -70,13 +76,13 @@ function Intro() {
       <Head>
         <h1>Botty NFT</h1>
         <MenuWrapper>
-          <MenuItem elementId="intro">介绍</MenuItem>
+          <MenuItem elementId="intro">Home</MenuItem>
           <MenuItem elementId="gallery">About</MenuItem>
           <MenuItem elementId="faq">F.A.Q</MenuItem>
         </MenuWrapper>
         <Tooltip title="OpenSea">
           <a
-            href="https://opensea.io/collection/gclx"
+            href= {SOCIAL_MEDIA_URL.OPENSEA}
             target="_blank"
             rel="noreferrer"
           >
@@ -92,7 +98,7 @@ function Intro() {
         </Tooltip>
         <Tooltip title="LooksRare">
           <a
-            href="https://looksrare.org/zh_hans/collections/0xBf66f2d9630A033022602c3279b04b4a37399927"
+            href= {SOCIAL_MEDIA_URL.LOOKSRARE}
             target="_blank"
             rel="noreferrer"
           >
@@ -108,7 +114,7 @@ function Intro() {
         </Tooltip>
         <Tooltip title="Twitter">
           <a
-            href="https://twitter.com/gclxnft"
+            href= {SOCIAL_MEDIA_URL.TWITTER}
             target="_blank"
             rel="noreferrer"
           >
