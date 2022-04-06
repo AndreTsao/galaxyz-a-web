@@ -102,8 +102,8 @@ function ConnectWallet(props) {
   if (address && !loading) {
     return (
       <Chip
+        style={{background: "#F3F1EB" }}
         label={address}
-        color="primary"
         onDelete={async () => {
           await disconnectWallet();
           setAddress(null);
@@ -117,9 +117,8 @@ function ConnectWallet(props) {
   return (
     <div style={{ position: "relative" }}>
       <Chip
-        style={{ fontSize: 16 }}
+        style={{ fontSize: 16,background: "#F3F1EB"}}
         label={loading ? "Connecting..." : "Connect Wallet"}
-        color="primary"
         onClick={async () => {
           setLoading(true);
           try {

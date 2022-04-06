@@ -56,7 +56,7 @@ function Gallery() {
   return (
     <Container
       style={{
-        background: "#fff",
+        background: "#B4ABE0",
       }}
       id="gallery"
     >
@@ -71,7 +71,7 @@ function Gallery() {
         {arts.map((art, idx) => {
           return (
             <GalleryItem key={idx}>
-              <img src={art} alt="Botty作品展示" />
+              <img style={{borderRadius: 8}} src={art} alt="Botty作品展示" />
             </GalleryItem>
           );
         })}

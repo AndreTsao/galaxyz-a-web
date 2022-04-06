@@ -18,7 +18,7 @@ function FAQ() {
   return (
     <Container
       style={{
-        background: "#dae7f8",
+        background: "#B4ABE0",
       }}
       id="faq"
     >
