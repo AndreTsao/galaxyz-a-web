@@ -55,13 +55,10 @@ const Content = styled.div`
 function Gallery() {
   return (
     <Container
-      style={{
-        background: "#B4ABE0",
-      }}
       id="gallery"
     >
       <Typography
-        style={{ textAlign: "center", marginTop: "5%" }}
+        style={{ textAlign: "center", marginTop: "5%" ,color: "#fff"}}
         variant="h3"
         gutterBottom
       >
@@ -78,11 +75,11 @@ function Gallery() {
       </GalleryList>
 
       <Content>
-        <Typography style={{ textAlign: "center" }} variant="h4" gutterBottom>
+        <Typography style={{ textAlign: "center",color: "#fff" }} variant="h4" gutterBottom>
           郑重说明
         </Typography>
         <Typography
-          style={{ marginBottom: 20, marginTop: 50 }}
+          style={{ marginBottom: 20, marginTop: 50,color: "#fff"}}
           variant="body1"
           gutterBottom
         >
@@ -90,18 +87,13 @@ function Gallery() {
           <strong>所见即所得</strong>
           ，我们保证开图时不会为您带来惊吓、眩晕、呕吐等不适感。
         </Typography>
-        <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
+        <Typography style={{ marginBottom: 20,color: "#fff"}} variant="body1" gutterBottom>
           2. 我们<strong>仅设置 1000 份限量作品</strong>
           ，因为我们精力有限难以保证质量，我们保证不会为了多卖而滥竽充数，我们保证不以任何方式增发。
         </Typography>
-        <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
+        <Typography style={{ marginBottom: 20,color: "#fff"}} variant="body1" gutterBottom>
           3. 如果您很穷没有钱，但又非常喜欢本系列作品，我们建议您
           <strong>右键保存图片</strong>，请不要借贷或者卖房参与。
-        </Typography>
-        <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
-          4. 因为我们是Botty
-          NFT，我们非常清楚作品的艺术价值和项目的开发成本，因此我们设置了作品的
-          <strong>良心价为 0.01 ETH 一个</strong>，童叟无欺。
         </Typography>
       </Content>
     </Container>

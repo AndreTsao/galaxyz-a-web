@@ -36,7 +36,7 @@ function MenuItem(props) {
   const elementId = props.elementId;
   return (
     <MenuItemText
-      style={{ padding: "10px 20px" }}
+      style={{ padding: "10px 20px",color:"white"}}
       onClick={() => {
         if (elementId) {
           const ele = document.getElementById(elementId);
@@ -63,13 +63,10 @@ const Content = styled.div`
 function Intro() {
   return (
     <Container
-      style={{
-        background: "#B4ABE0",
-      }}
       id="intro"
     >
       <Head>
-        <h1>Botty NFT</h1>
+        <h1 style={{color:"white"}}>Botty NFT</h1>
         <MenuWrapper>
           <MenuItem elementId="intro">Home</MenuItem>
           <MenuItem elementId="gallery">About</MenuItem>
@@ -87,7 +84,7 @@ function Intro() {
                 width: 40,
                 marginRight: "40px",
               }}
-              src="/icons/opensea.svg"
+              src="/icons/opensea.png"
             />
           </a>
         </Tooltip>
@@ -117,7 +114,7 @@ function Intro() {
               style={{
                 width: 40,
               }}
-              src="/icons/twitter.svg"
+              src="/icons/twitter.png"
             />
           </a>
         </Tooltip>

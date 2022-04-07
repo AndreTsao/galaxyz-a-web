@@ -17,27 +17,24 @@ const Content = styled.div`
 function FAQ() {
   return (
     <Container
-      style={{
-        background: "#B4ABE0",
-      }}
       id="faq"
     >
       <Typography
-        style={{ textAlign: "center", marginTop: "5%" }}
+        style={{ textAlign: "center", marginTop: "5%",color:'white'}}
         variant="h3"
         gutterBottom
         component="div"
       >
-        问与答
+        FAQs
       </Typography>
 
       <Content style={{ padding: "5px" }}>
-        <Accordion>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>什么是 NFT？如何购买本项目的 NFT？</Typography>
+        <Accordion style={{background:'black'}}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'white'}}/>}>
+            <Typography style={{color:'white'}}>什么是 NFT？如何购买本项目的 NFT？</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="body2">
+            <Typography variant="body2" style={{color:'white'}}>
               朋友您还需要多多学习，暂时不适合参与本项目，您可以右键保存您喜欢的图片当头像，别买了。
             </Typography>
           </AccordionDetails>

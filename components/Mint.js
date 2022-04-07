@@ -287,7 +287,7 @@ function MintSection() {
           }}
         />
         <Typography
-          style={{ textAlign: "center",fontSize: 150, minWidth:260}}
+          style={{ textAlign: "center",fontSize: 150, minWidth:260,color: "#fff"}}
           variant="h3"
           component="div"
         >
@@ -311,7 +311,7 @@ function MintSection() {
           }}
         />
         <Typography
-          style={{ textAlign: "center",fontSize: 20,marginLeft:20,cursor: "pointer"}}
+          style={{ textAlign: "center",fontSize: 20,marginLeft:20,cursor: "pointer",color: "#fff"}}
           variant="h3"
           component="div"
           onClick={()=>{
@@ -322,7 +322,7 @@ function MintSection() {
         </Typography>
       </div>
       {mintButton}
-      <div style={{ marginTop: 120, fontSize: 25, textAlign: "center" }}>
+      <div style={{ marginTop: 120, fontSize: 25, textAlign: "center",color: "#fff"}}>
         Minted：{progress === null ? "Please connect wallet" : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}，价格
         0.002 ETH 一个，每个钱包最多 10 个.
         <br />
@@ -335,13 +335,10 @@ function MintSection() {
 function Mint() {
   return (
     <Container
-      style={{
-        color: "#fff",
-      }}
       id="mint"
     >
       <Typography
-        style={{ textAlign: "center", marginTop: "5%" }}
+        style={{ textAlign: "center", marginTop: "5%",color: "#fff"}}
         variant="h3"
         gutterBottom
         component="div"
