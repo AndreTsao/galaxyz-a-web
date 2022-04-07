@@ -73,52 +73,6 @@ function Intro() {
           <MenuItem elementId="roadmap">Roadmap</MenuItem>
           <MenuItem elementId="faq">F.A.Q</MenuItem>
         </MenuWrapper>
-        <Tooltip title="OpenSea">
-          <a
-            href= {SOCIAL_MEDIA_URL.OPENSEA}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              style={{
-                cursor: "pointer",
-                width: 40,
-                marginRight: "40px",
-              }}
-              src="/icons/opensea.png"
-            />
-          </a>
-        </Tooltip>
-        <Tooltip title="LooksRare">
-          <a
-            href= {SOCIAL_MEDIA_URL.LOOKSRARE}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              style={{
-                cursor: "pointer",
-                width: 40,
-                marginRight: "40px",
-              }}
-              src="/icons/looksrare.png"
-            />
-          </a>
-        </Tooltip>
-        <Tooltip title="Twitter">
-          <a
-            href= {SOCIAL_MEDIA_URL.TWITTER}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              style={{
-                width: 40,
-              }}
-              src="/icons/twitter.png"
-            />
-          </a>
-        </Tooltip>
         <ConnectWallet showCollect={true} />
       </Head>
     </Container>
