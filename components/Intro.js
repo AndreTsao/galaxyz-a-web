@@ -70,6 +70,7 @@ function Intro() {
         <MenuWrapper>
           <MenuItem elementId="intro">Home</MenuItem>
           <MenuItem elementId="gallery">About</MenuItem>
+          <MenuItem elementId="roadmap">Roadmap</MenuItem>
           <MenuItem elementId="faq">F.A.Q</MenuItem>
         </MenuWrapper>
         <Tooltip title="OpenSea">

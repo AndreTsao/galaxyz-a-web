@@ -4,6 +4,7 @@ import Intro from "../components/Intro";
 import Gallery from "../components/Gallery";
 import FAQ from "../components/FAQ";
 import Mint from "../components/Mint";
+import Roadmap from "../components/Roadmap";
 
 export default function Home() {
   useEffect(() => {
@@ -43,6 +44,7 @@ export default function Home() {
       <Intro />
       <Mint />
       <Gallery />
+      <Roadmap />
       <FAQ />
     </div>
   );
