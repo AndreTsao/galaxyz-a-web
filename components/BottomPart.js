@@ -6,7 +6,7 @@ import { SOCIAL_MEDIA_URL } from "../widget/projectParam";
 
 const Content = styled.div`
   max-width: 840px;
-  margin: 5% auto 5% auto;
+  margin: 10px auto 20px auto;
   display: flex;
   align-items: center;
 `;

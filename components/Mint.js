@@ -324,7 +324,7 @@ function MintSection() {
       {mintButton}
       <div style={{ marginTop: 120, fontSize: 25, textAlign: "center",color: "#fff"}}>
         Minted：{progress === null ? "Please connect wallet" : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}，价格
-        0.002 ETH 一个，每个钱包最多 10 个.
+        {CONTRACT_NFT_PER_PRICE} ETH 一个，每个钱包最多 {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} 个.
         <br />
         Go
       </div>
