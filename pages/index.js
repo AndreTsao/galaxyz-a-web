@@ -18,7 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{background: "black"}}>
+    <div style={{background: "black",display:"flex",flexDirection:"column",justifyContent:"center"}}>
       <Head>
         <title>Botty NFT - Enter metaverse </title>
         <meta name="description" content="The limit is 1000" />

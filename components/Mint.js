@@ -256,11 +256,11 @@ function MintSection() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-      }}
-    >
+        minWidth:740,
+        marginLeft:50,
+      }}>
       <div style={{ marginBottom: 120, display: "flex", alignItems: "center" }}>
-        Your wallet: <ConnectWallet />{" "}
-        {fullAddress && (
+        Your wallet{fullAddress && (
           <span style={{ marginLeft: 10 }}>
             can mint {CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted} Botties
           </span>
@@ -270,6 +270,12 @@ function MintSection() {
         display: "flex",
         alignItems:"center",
       }}>
+        <Typography
+          style={{ textAlign: "center",fontSize: 20,marginRight:20,cursor: "pointer",color: "transparent"}}
+          variant="h3"
+          component="div">
+          {"Get Max"}
+        </Typography>
         <img
           style={{
             cursor: "pointer",
@@ -316,8 +322,7 @@ function MintSection() {
           component="div"
           onClick={()=>{
             setWantMintAmount( CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted)
-          }}
-        >
+          }}>
           {"Get Max"}
         </Typography>
       </div>
@@ -360,9 +365,8 @@ function Mint() {
             border: "4px dashed #000",
             padding: "40px",
             borderRadius: 20,
-            minWidth:740,
-            marginLeft:50,
             marginRight:50,
+            marginLeft:50,
             background: "#175C5B",
           }}
         >

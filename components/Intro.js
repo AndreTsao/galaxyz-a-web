@@ -4,7 +4,7 @@ import Tooltip from "@mui/material/Tooltip";
 import Container from "./Container";
 import ConnectWallet from "./ConnectWallet";
 import { padWidth } from "../widget/utils";
-import { SOCIAL_MEDIA_URL } from "../widget/projectParam";
+import { CONTRACT_NFT_OFFICIAL_NAME, SOCIAL_MEDIA_URL } from "../widget/projectParam";
 
 const Head = styled.div`
   display: flex;
@@ -64,9 +64,9 @@ function Intro() {
   return (
     <Container
       id="intro"
-    >
+      >
       <Head>
-        <h1 style={{color:"white"}}>Botty NFT</h1>
+        <h1 style={{color:"white"}}>{CONTRACT_NFT_OFFICIAL_NAME}NFT</h1>
         <MenuWrapper>
           <MenuItem elementId="intro">Home</MenuItem>
           <MenuItem elementId="gallery">About</MenuItem>
