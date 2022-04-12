@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import Intro from "../components/Intro";
-import Gallery from "../components/Gallery";
 import FAQ from "../components/FAQ";
 import Mint from "../components/Mint";
 import Roadmap from "../components/Roadmap";
@@ -44,7 +43,6 @@ export default function Home() {
       </Head>
       <Intro/>
       <Mint/>
-      <Gallery/>
       <Roadmap/>
       <FAQ/>
       <BottomPart/>
