@@ -3,10 +3,11 @@ import { padWidth } from "../widget/utils";
 
 const ContainerWrapper = styled.div``;
 const Content = styled.div`
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
   @media only screen and (max-width: ${padWidth}) {
     padding: 30px 0;
   }

@@ -256,8 +256,7 @@ function MintSection() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        minWidth:740,
-        marginLeft:50,
+        minWidth:740
       }}>
       <div style={{ marginBottom: 120, display: "flex", alignItems: "center" }}>
         Your wallet{fullAddress && (
