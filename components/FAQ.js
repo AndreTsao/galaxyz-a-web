@@ -29,7 +29,7 @@ function FAQ() {
       </Typography>
 
       <Content style={{ padding: "5px" }}>
-        <Accordion style={{background:'black'}}>
+        <Accordion style={{background:'black',border:'1px solid white',borderRadius:'5px'}}>
           <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'white'}}/>}>
             <Typography style={{color:'white'}}>什么是 NFT？如何购买本项目的 NFT？</Typography>
           </AccordionSummary>
@@ -39,12 +39,12 @@ function FAQ() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion style={{ marginTop: 20 }}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>这个项目有什么用？</Typography>
+        <Accordion style={{ marginTop: 20,background:'black',border:'1px solid white',borderRadius:'5px'}}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'white'}}/>}>
+            <Typography style={{color:'white'}}>这个项目有什么用？</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="body2">
+            <Typography variant="body2" style={{color:'white'}}>
               没啥卵用，就是个头像。购买之后您将拥有对您持有 NFT
               的无限使用权，对，就是那个{" "}
               <a
@@ -58,48 +58,48 @@ function FAQ() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion style={{ marginTop: 20 }}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>供应量以及价格和铸造规则？</Typography>
+        <Accordion style={{ marginTop: 20,background:'black',border:'1px solid white',borderRadius:'5px'}}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'white'}}/>}>
+            <Typography style={{color:'white'}}>供应量以及价格和铸造规则？</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="body2">
+            <Typography variant="body2" style={{color:'white'}}>
               全宇宙（包括元宇宙）限量 <strong>1000</strong> 个。每个售价{" "}
               <strong>0.002</strong> ETH。每个钱包地址可以铸造最多{" "}
               <strong>2</strong> 个。每个人每天最多 <strong>2</strong> 个钱包。
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion style={{ marginTop: 20 }}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>如何实现每个人每天最多铸造 2 个钱包的限制？</Typography>
+        <Accordion style={{ marginTop: 20,background:'black',border:'1px solid white',borderRadius:'5px'}}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'white'}}/>}>
+            <Typography style={{color:'white'}}>如何实现每个人每天最多铸造 2 个钱包的限制？</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="body2">
+            <Typography variant="body2" style={{color:'white'}}>
               技术上我们是搞不定的，所以只能通过道德绑架的方式。
               <strong>今天，我们都是良心铸造人！</strong>
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion style={{ marginTop: 20 }}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>项目方是否会保留或者持有稀有作品？</Typography>
+        <Accordion style={{ marginTop: 20,background:'black',border:'1px solid white',borderRadius:'5px'}}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'white'}}/>}>
+            <Typography style={{color:'white'}}>项目方是否会保留或者持有稀有作品？</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="body2">
+            <Typography variant="body2" style={{color:'white'}}>
               不会。这将会是 Fair
               Launch（就是公平发射的意思）。项目成员没有任何保留，将参与公售，不会利用任何内幕进行交易，严格遵循良心铸造人的行为准则。
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion style={{ marginTop: 20 }}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>
+        <Accordion style={{ marginTop: 20,background:'black',border:'1px solid white',borderRadius:'5px'}}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'white'}}/>}>
+            <Typography style={{color:'white'}}>
               为什么 OpenSea 上面设置 10% 的版税？这么高？
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="body2">能捞多少算多少。</Typography>
+            <Typography variant="body2" style={{color:'white'}}>能捞多少算多少。</Typography>
           </AccordionDetails>
         </Accordion>
       </Content>

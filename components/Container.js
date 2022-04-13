@@ -5,9 +5,9 @@ const ContainerWrapper = styled.div``;
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
+  //max-width: 1200px;
+  padding: 0 3%;
+  justify-content: center;
   @media only screen and (max-width: ${padWidth}) {
     padding: 30px 0;
   }
