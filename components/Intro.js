@@ -69,7 +69,7 @@ function Intro() {
         <h1 style={{color:"white"}}>{CONTRACT_NFT_OFFICIAL_NAME}NFT</h1>
         <MenuWrapper>
           <MenuItem elementId="intro">Home</MenuItem>
-          <MenuItem elementId="gallery">About</MenuItem>
+          <MenuItem elementId="about">About</MenuItem>
           <MenuItem elementId="roadmap">Roadmap</MenuItem>
           <MenuItem elementId="faq">F.A.Q</MenuItem>
         </MenuWrapper>

@@ -5,6 +5,7 @@ import FAQ from "../components/FAQ";
 import Mint from "../components/Mint";
 import Roadmap from "../components/Roadmap";
 import BottomPart from "../components/BottomPart";
+import About from "../components/About";
 
 export default function Home() {
   useEffect(() => {
@@ -43,6 +44,7 @@ export default function Home() {
       </Head>
       <Intro/>
       <Mint/>
+      <About/>
       <Roadmap/>
       <FAQ/>
       <BottomPart/>
