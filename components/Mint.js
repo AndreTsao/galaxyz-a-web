@@ -347,7 +347,7 @@ function Mint() {
         gutterBottom
         component="div"
       >
-        B o t t y
+        T o c a b o
       </Typography>
 
       <Content>

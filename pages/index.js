@@ -11,16 +11,16 @@ export default function Home() {
   useEffect(() => {
     if (window.console) {
       console.log(
-        "%c Hello,I am botty",
+        "%c Hello,I am Tocabo",
         "font-size: 20px;"
       );
     }
   }, []);
 
   return (
-    <div style={{background: "black",display:"flex",flexDirection:"column",justifyContent:"center"}}>
+    <div style={{background: "black",display:"flex",flexDirection:"column",justifyContent:"center",paddingBottom:'25px'}}>
       <Head>
-        <title>Botty NFT - Enter metaverse </title>
+        <title>Tocabo NFT - Enter metaverse </title>
         <meta name="description" content="The limit is 1000" />
         <link rel="icon" href="/favicon.png" />
 

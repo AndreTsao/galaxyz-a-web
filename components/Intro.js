@@ -27,6 +27,7 @@ const MenuWrapper = styled.div`
 
 const MenuItemText = styled.span`
   cursor: pointer;
+  font-size:21px;
   :hover {
     font-weight: bold;
   }
