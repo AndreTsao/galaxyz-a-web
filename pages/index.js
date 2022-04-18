@@ -18,7 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{background: "black",display:"flex",flexDirection:"column",justifyContent:"center",paddingBottom:'25px'}}>
+    <div style={{background: "black",display:"flex",flexDirection:"column",alignItems:"center",paddingBottom:'42px'}}>
       <Head>
         <title>Tocabo NFT - Enter metaverse </title>
         <meta name="description" content="The limit is 1000" />

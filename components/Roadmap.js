@@ -18,12 +18,14 @@ function getRoadmapItem(isFinish,title,content){
   <div style={{background:'white',width:'2px',flex:1}}/>
   <div style={{background:'white',width:'2px',flex:1}}/>
    </div>
-  <Typography
-    style={{color:'white',padding:'30px 0'}}
+   <div style={{padding:'30px 0'}}>
+   <Typography style={{color:'white'}}>{title}</Typography>
+   <Typography
+    style={{color:'white'}}
     variant="body1">
-    <strong>{title}</strong>{" "}
     {isFinish?(<del>{content}</del>):content}
   </Typography>
+   </div>
   </div>)
 }
 

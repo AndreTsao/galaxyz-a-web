@@ -1,67 +1,38 @@
 import styled from "styled-components";
 import Container from "./Container";
 import Typography from "@mui/material/Typography";
+import { padWidth } from "../widget/utils";
 
-const Content = styled.div`
-  max-width: 840px;
-  margin: 5% auto 5% auto;
-  strong {
-    color: red;
-  }
-`;
+// const Content = styled.div`
+//   max-width: 840px;
+//   margin: 5% auto 5% auto;
+//   strong {
+//     color: red;
+//   }
+// `;
+
 
 function About() {
   return (
     <Container
-      id="about"
-    >
+      id="about">
       <Typography
-        style={{ textAlign: "center", marginTop: "5%", color:'white'}}
+        style={{ textAlign: "center", marginTop: "5%", color:'white',background:'green'}}
         variant="h3"
         gutterBottom
-        component="div"
-      >
+        component="div">
         ABOUT
       </Typography>
-
-      <Content>
         <Typography
-          style={{ marginBottom: 20, marginTop: "4%",color:'white'}}
+          style={{marginBottom: 20, color:'white',background:'blue'}}
           variant="body1"
-          gutterBottom
-        >
-          <strong>2022 Q1</strong>{" "}
-          <del>
-            我们这就是一个卖 JPG 的项目，所以我们的 Q1
-            发展目标就是把所有图片全部卖掉。
-          </del>
-          （2022.03.02{" "}
-          <a
-            href="https://twitter.com/gclxnft/status/1498978154056065024"
-            target="_blank"
-            rel="noreferrer"
-          >
-            提前完成
-          </a>
-          ）
+          gutterBottom>
+        It’s 2570! The human race has ended and the advanced Tigers have taken over the world. The Tiger Clan is the city of 10,000 Tigers that are ruling the world. Do you want to be a part of the ruling city?
+
+        Become a part of TTC with our 10,000 unique NFTs. These are not just any NFT living on Ethereum blockchain but this NFT will give you VIP access and free objects in the most anticipated and exciting digital race in the history of Metaverse.
+
+        Our privileged TTC family will enjoy member-only benefits, membership cards, TTC tokens (to be launched soon), and other perks. So, take a leap from the world of web3 to the Metaverse and join The Tiger Clan (TTC). Check out our website/roadmap now!
         </Typography>
-        <Typography style={{ marginBottom: 20,color:'white'}} variant="body1" gutterBottom>
-          <strong>2022 Q2</strong> 我们保证不会做【国产良心
-          verse】等等元宇宙概念项目或者链游。我们没想法、没时间也没技术，当然，也没钱。
-        </Typography>
-        <Typography style={{ marginBottom: 20,color:'white'}} variant="body1" gutterBottom>
-          <strong>2022 Q3</strong>{" "}
-          我们应该不会做二次创作、周边、衣服、租商业街开店等。
-        </Typography>
-        <Typography style={{ marginBottom: 20,color:'white'}} variant="body1" gutterBottom>
-          <strong>2022 Q4</strong>{" "}
-          我们大概在这个时间或者之前卷钱跑路，所有未MINT完成的NFT将会被全部锁定在合约当中，同时我们将放弃合约的控制权，交给社区管理！
-        </Typography>
-        <Typography style={{ marginBottom: 20,color:'white'}} variant="body1" gutterBottom>
-          我们是国产良心 NFT
-          项目，不太擅长开空头支票。如果之后做了，就算超出预期吧，再更新上来。
-        </Typography>
-      </Content>
     </Container>
   );
 }

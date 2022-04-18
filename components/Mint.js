@@ -340,6 +340,7 @@ function Mint() {
   return (
     <Container
       id="mint"
+      style={{maxwidth: '1400px'}}
     >
       <Typography
         style={{ textAlign: "center", marginTop: "5%",color: "#fff"}}
