@@ -256,9 +256,9 @@ function MintSection() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        minWidth:740
+        minWidth:'740px'
       }}>
-      <div style={{ marginBottom: 120, display: "flex", alignItems: "center" }}>
+      <div style={{ marginBottom: '120px', display: "flex", alignItems: "center" }}>
         Your wallet{fullAddress && (
           <span style={{ marginLeft: 10 }}>
             can mint {CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted} Botties
@@ -336,17 +336,9 @@ function MintSection() {
 
 function Mint() {
   return (
-    <Container
-      id="mint"
-      style={{maxwidth: '1400px'}}>
-      <Content>
-        <img
-          style={{
-            width: 188,
-            height: 234,
-          }}
-          src="/images/home_image1.png"
-        />
+    <div
+      style={{display:"flex",background:'blue',width:'100%',height:'1200px',padding: '0 3%',backgroundImage:`url(/images/home_background.png)`,backgroundSize:'100%',backgroundRepeat:'no-repeat'}}
+      id="mint">
         <div
           style={{
             marginTop: 60,
@@ -360,15 +352,7 @@ function Mint() {
         >
           <MintSection />
         </div>
-        <img
-          style={{
-            width: 118,
-            height: 71,
-          }}
-          src="/images/home_image2.png"
-        />
-      </Content>
-    </Container>
+    </div>
   );
 }
 

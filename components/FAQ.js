@@ -39,7 +39,7 @@ function FAQ() {
       {getFAQItem('Who is team behind TocaIsland?',
       '没啥卵用，就是个头像。购买之后您将拥有对您持有 NFT的无限使用权，对，就是那个')}
       {getFAQItem('Contrtact Adress',
-      'TocaboNFTs:xxxxxxxxx  TocaboTreeNFTs: Coming soon...  TocaboTreeNFTs: Coming soon...  $TocaoWorms: Coming soon... TocaIsland Metaverse: Coming soon...')}
+      'TocaboNFTs:xxxxxxxxx  TocaboTreeNFTs: Coming soon...  TocaboTreeNFTs: Coming soon...  $TocaWorm: Coming soon... TocaIsland Metaverse: Coming soon...')}
       {getFAQItem('What about the secondary market (like OpenSea) royalty fee?',
       '7% (note that the majority of royalties will be used for the prizepool of TocaIsland).')}
       {getFAQItem('What about the secondary market (like OpenSea) royalty fee?',

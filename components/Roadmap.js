@@ -32,8 +32,7 @@ function getRoadmapItem(isFinish,title,content){
 function Roadmap() {
   return (
     <Container
-      id="roadmap"
-    >
+      id="roadmap">
       <Typography
         style={{ textAlign: "center", marginTop: "5%", color:'white'}}
         variant="h3"
