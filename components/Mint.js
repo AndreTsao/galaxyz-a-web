@@ -327,10 +327,8 @@ function MintSection() {
       </div>
       {mintButton}
       <div style={{ marginTop: 120, fontSize: 25, textAlign: "center",color: "#fff"}}>
-        Minted：{progress === null ? "Please connect wallet" : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}，价格
-        {CONTRACT_NFT_PER_PRICE} ETH 一个，每个钱包最多 {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} 个.
-        <br />
-        Go
+        Minted：{progress === null ? "Please connect wallet ..." : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}. {CONTRACT_NFT_PER_PRICE} ETH each. <br/>A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
+        
       </div>
     </div>
   );
@@ -340,17 +338,7 @@ function Mint() {
   return (
     <Container
       id="mint"
-      style={{maxwidth: '1400px'}}
-    >
-      <Typography
-        style={{ textAlign: "center", marginTop: "5%",color: "#fff"}}
-        variant="h3"
-        gutterBottom
-        component="div"
-      >
-        T o c a b o
-      </Typography>
-
+      style={{maxwidth: '1400px'}}>
       <Content>
         <img
           style={{

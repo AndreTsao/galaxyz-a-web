@@ -19,7 +19,7 @@ function getRoadmapItem(isFinish,title,content){
   <div style={{background:'white',width:'2px',flex:1}}/>
    </div>
    <div style={{padding:'30px 0'}}>
-   <Typography style={{color:'white'}}>{title}</Typography>
+   <Typography variant="h4" style={{color:'white'}}>{title}</Typography>
    <Typography
     style={{color:'white'}}
     variant="body1">
@@ -38,16 +38,13 @@ function Roadmap() {
         style={{ textAlign: "center", marginTop: "5%", color:'white'}}
         variant="h3"
         gutterBottom
-        component="div"
-      >
+        component="div">
         ROADMAP
       </Typography>
-
-      {getRoadmapItem(true,'2022 Q1','我们这就是一个卖 JPG 的项目，所以我们的Q1发展目标就是把所有图片全部卖掉。')}
-      {getRoadmapItem(false,'2022 Q2','我们保证不会做【国产良心verse】等等元宇宙概念项目或者链游。我们没想法、没时间也没技术，当然，也没钱。')}
-      {getRoadmapItem(false,'2022 Q3','我们应该不会做二次创作、周边、衣服、租商业街开店等。')}
-      {getRoadmapItem(false,'2022 Q4','我们大概在这个时间或者之前卷钱跑路，所有未MINT完成的NFT将会被全部锁定在合约当中，同时我们将放弃合约的控制权，交给社区管理！')}
-        
+      {getRoadmapItem(true,'2022 Q1 TocaboNFT','开发Tocado合约,website')}
+      {getRoadmapItem(false,'2022 Q2 TocaTree $TocaoWorms','分发Toca Island的树木，每2只Tocabos被空投一颗树，质押树产生虫子($TocaoWorms Token)')}
+      {getRoadmapItem(false,'2022 Q3 Tocabo Gains weight','鸟吃虫之后体重增加。体重越重的获得越多的TocaIsland的土地')}
+      {getRoadmapItem(false,'2022 Q4 TocaIsland Zone Distribution','构建TocaIsland，分发土地')}
     </Container>
   );
 }

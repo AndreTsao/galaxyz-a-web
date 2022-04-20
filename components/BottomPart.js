@@ -55,6 +55,7 @@ function BottomPart() {
           />
         </a>
       </Tooltip>
+      <Typography style={{color: 'white', fontSize:'12px'}}>© 2022 TOCAISLAND. ALL RIGHTS RESERVED</Typography>
     </Content>
   );
 }

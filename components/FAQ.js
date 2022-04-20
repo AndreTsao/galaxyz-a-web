@@ -5,10 +5,11 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { CONTRACT_NFT_PER_PRICE, CONTRACT_NFT_TOTAL_AMOUNT } from "../widget/projectParam";
 
 function getFAQItem(title,content){
   return(
-  <Accordion style={{background:'black',border:'1px solid white',borderRadius:'5px'}}>
+  <Accordion style={{background:'black',border:'1px solid white',borderRadius:'6px'}}>
    <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'white'}}/>}>
     <Typography style={{color:'white'}}>{title}</Typography>
    </AccordionSummary>
@@ -31,14 +32,18 @@ function FAQ() {
         component="div">
         FAQs
       </Typography>
-      {getFAQItem('什么是 NFT？如何购买本项目的 NFT？',
-      '朋友您还需要多多学习，暂时不适合参与本项目，您可以右键保存您喜欢的图片当头像，别买了。')}
-      {getFAQItem('这个项目有什么用？',
+      {getFAQItem('Minting',
+      `1,The total supply of TocaboNFTs is ${CONTRACT_NFT_TOTAL_AMOUNT}.\n A maximum of 10 Tocabo NFTs can be minted per wallet. The minting price is ${CONTRACT_NFT_PER_PRICE} ETH. No pre-sale, only public sale. 
+      2, The total supply of TocaboTreeNFTs is 2833. We will AirDrop all of TocaboTreeNFTs for the Tocabo holder who have at least 2 TocaboNFTs. 
+      3, 70% of TocaIsland land will be AirDropped to the holder who stake Tocabos and TocaoWorms Token.`)}
+      {getFAQItem('Who is team behind TocaIsland?',
       '没啥卵用，就是个头像。购买之后您将拥有对您持有 NFT的无限使用权，对，就是那个')}
-      {getFAQItem('项目方是否会保留或者持有稀有作品？',
-      '不会。这将会是 FairLaunch（就是公平发射的意思）。项目成员没有任何保留，将参与公售，不会利用任何内幕进行交易，严格遵循良心铸造人的行为准则。')}
-      {getFAQItem('为什么 OpenSea 上面设置 10% 的版税？这么高？',
-      '能捞多少算多少。')}
+      {getFAQItem('Contrtact Adress',
+      'TocaboNFTs:xxxxxxxxx  TocaboTreeNFTs: Coming soon...  TocaboTreeNFTs: Coming soon...  $TocaoWorms: Coming soon... TocaIsland Metaverse: Coming soon...')}
+      {getFAQItem('What about the secondary market (like OpenSea) royalty fee?',
+      '7% (note that the majority of royalties will be used for the prizepool of TocaIsland).')}
+      {getFAQItem('What about the secondary market (like OpenSea) royalty fee?',
+      '7% (note that the majority of royalties will be used for the prizepool of TocaIsland).')}
     </Container>
   );
 }
