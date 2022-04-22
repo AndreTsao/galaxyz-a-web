@@ -4,7 +4,7 @@ import Intro from "../components/Intro";
 import FAQ from "../components/FAQ";
 import Mint from "../components/Mint";
 import Roadmap from "../components/Roadmap";
-import BottomPart from "../components/BottomPart";
+import BottomPart from "../components/Footer";
 import About from "../components/About";
 
 export default function Home() {
