@@ -28,8 +28,8 @@ function About() {
           variant="body1"
           gutterBottom>
         Tocabo is an exclusive NFT collection of 5555 toucans NFT living on the Ethereum blockchain.
-        <div/>Become a part of TTC with our 10,000 unique NFTs. These are not just any NFT living on Ethereum blockchain but this NFT will give you VIP access and free objects in the most anticipated and exciting digital race in the history of Metaverse.
-        <div/>Our privileged TTC family will enjoy member-only benefits, membership cards, TTC tokens (to be launched soon), and other perks. So, take a leap from the world of web3 to the Metaverse and join The Tiger Clan (TTC). Check out our website/roadmap now!
+        Become a part of TTC with our 10,000 unique NFTs. These are not just any NFT living on Ethereum blockchain but this NFT will give you VIP access and free objects in the most anticipated and exciting digital race in the history of Metaverse.
+        Our privileged TTC family will enjoy member-only benefits, membership cards, TTC tokens (to be launched soon), and other perks. So, take a leap from the world of web3 to the Metaverse and join The Tiger Clan (TTC). Check out our website/roadmap now!
         </Typography>
     </Container>
   );
