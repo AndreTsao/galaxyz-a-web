@@ -63,10 +63,20 @@ const Content = styled.div`
 
 function Intro() {
   return (
-    <Container
-      id="intro">
+    <div
+      id="intro"
+      style={{display:"flex",flexDirection:'column',width:'1200px',background:'blue'}}
+      >
       <Head>
-        <h1 style={{color:"white"}}>{CONTRACT_NFT_OFFICIAL_NAME}NFT</h1>
+        <h1 style={{color:"white",fontSize:'50px',display:'flex'}}>
+          <img
+            style={{
+              width: "43px",
+              height: "43px",
+              marginRight:'7px',
+            }}
+            src="favicon.png"
+          />TocaIsland</h1>
         <MenuWrapper>
           <MenuItem elementId="intro">Home</MenuItem>
           <MenuItem elementId="about">About</MenuItem>
@@ -75,7 +85,7 @@ function Intro() {
         </MenuWrapper>
         <ConnectWallet showCollect={true} />
       </Head>
-    </Container>
+    </div>
   );
 }
 

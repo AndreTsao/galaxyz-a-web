@@ -115,7 +115,6 @@ function ConnectWallet(props) {
   }
 
   return (
-    <div style={{ position: "relative" }}>
       <Chip
         style={{ fontSize: 16,background: "#F3F1EB"}}
         label={loading ? "Connecting..." : "Connect Wallet"}
@@ -156,7 +155,6 @@ function ConnectWallet(props) {
           setLoading(false);
         }}
       />
-    </div>
   );
 }
 
