@@ -22,13 +22,11 @@ const ETHERSCAN_DOMAIN =
     ? "etherscan.io"
     : "rinkeby.etherscan.io";
 
-const Content = styled.div`
-  margin: 0 auto 5% auto;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  strong {
-    color: red;
+const GetMaxSpan = styled.span`
+  text-align: center;
+  cursor: pointer;
+  :hover {
+    font-weight: bold;
   }
 `;
 
@@ -274,12 +272,11 @@ function MintSection() {
         display: "flex",
         alignItems: "center",
       }}>
-        <Typography
-          style={{ textAlign: "center", fontSize: '18px', marginRight: '11px', color: "transparent" }}
-          variant="h3"
-          component="div">
+        <span
+          style={{ textAlign: "center", fontSize: '18px', padding: '11px', color: "transparent" }}
+          >
           {"Get Max"}
-        </Typography>
+        </span>
         <img
           style={{
             cursor: "pointer",
@@ -318,13 +315,17 @@ function MintSection() {
             setWantMintAmount(wantMintAmount + 1)
           }}
         />
-        <span
-          style={{ textAlign: "center", fontSize: '18px',padding:'11px',cursor: "pointer", color: "#fff" ,'&:hover':{color: 'blue'}}}
+        <GetMaxSpan
+          style={{
+            fontSize: '18px',
+            padding: '11px',
+            color: 'fff'
+          }}
           onClick={() => {
             setWantMintAmount(CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted)
           }}>
           {"Get Max"}
-        </span>
+        </GetMaxSpan>
       </div>
       {mintButton}
       <div style={{ marginTop: '40px', fontSize: '23px', textAlign: "center", color: "#fff" }}>
