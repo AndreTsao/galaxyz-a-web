@@ -10,8 +10,8 @@ const CONTRACT_STATUS = {
 }
 const SOCIAL_MEDIA_URL = {
   'OPENSEA': 'https://opensea.io/collection/gclx',
-  'LOOKSRARE': 'https://looksrare.org/zh_hans/collections/0xBf66f2d9630A033022602c3279b04b4a37399927',
-  'TWITTER': 'https://twitter.com/gclxnft',
+  'LOOKSRARE': 'LOOKSRARE',
+  'TWITTER': 'https://twitter.com/TocaIsland',
 }
 
 export {

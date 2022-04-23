@@ -9,9 +9,9 @@ import { CONTRACT_NFT_PER_PRICE, CONTRACT_NFT_TOTAL_AMOUNT } from "../widget/pro
 
 function getFAQItem(title, content) {
   return (
-    <Accordion style={{ background: 'black', border: '1px solid white', borderRadius: '6px' }}>
+    <Accordion style={{ background: 'black', border: '1px solid white', borderRadius: '12px' }}>
       <AccordionSummary expandIcon={<ExpandMoreIcon style={{ color: 'white' }} />}>
-        <Typography style={{ color: 'white' }}>{title}</Typography>
+        <Typography style={{ color: 'white',fontSize:'30px'}}>{title}</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Typography variant="body2" style={{ color: 'white' }}>

@@ -13,7 +13,22 @@ const Content = styled.div`
 
 function BottomPart() {
   return (
-    <Content>
+    <div style={{display:'flex',flexDirection:'column',alignItems:'center',padding:'70px 0 20px'}}>
+      <div>
+      <Tooltip title="Twitter">
+        <a
+          href= {SOCIAL_MEDIA_URL.TWITTER}
+          target="_blank"
+          rel="noreferrer">
+          <img
+            style={{
+              width: '44px',
+              marginRight: "40px",
+            }}
+            src="/icons/twitter.png"
+          />
+        </a>
+      </Tooltip>
       <Tooltip title="OpenSea">
         <a
           href= {SOCIAL_MEDIA_URL.OPENSEA}
@@ -22,7 +37,7 @@ function BottomPart() {
           <img
             style={{
               cursor: "pointer",
-              width: 40,
+              width: '44px',
               marginRight: "40px",
             }}
             src="/icons/opensea.png"/>
@@ -36,27 +51,14 @@ function BottomPart() {
           <img
             style={{
               cursor: "pointer",
-              width: 40,
-              marginRight: "40px",
+              width: '44px',
             }}
-            src="/icons/looksrare.png"/>
+            src="/icons/discord.png"/>
         </a>
       </Tooltip>
-      <Tooltip title="Twitter">
-        <a
-          href= {SOCIAL_MEDIA_URL.TWITTER}
-          target="_blank"
-          rel="noreferrer">
-          <img
-            style={{
-              width: 40,
-            }}
-            src="/icons/twitter.png"
-          />
-        </a>
-      </Tooltip>
-      <Typography style={{color: 'white', fontSize:'12px'}}>© 2022 TOCAISLAND. ALL RIGHTS RESERVED</Typography>
-    </Content>
+      </div>
+      <Typography style={{color: 'white', fontSize:'12px',paddingTop:'9px'}}>© 2022 TOCAISLAND. ALL RIGHTS RESERVED</Typography>
+    </div>
   );
 }
 

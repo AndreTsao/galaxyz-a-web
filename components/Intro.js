@@ -27,7 +27,7 @@ const MenuWrapper = styled.div`
 
 const MenuItemText = styled.span`
   cursor: pointer;
-  font-size:21px;
+  font-size:30px;
   :hover {
     font-weight: bold;
   }
@@ -37,7 +37,7 @@ function MenuItem(props) {
   const elementId = props.elementId;
   return (
     <MenuItemText
-      style={{ padding: "10px 20px",color:"white",fontSize:'40px'}}
+      style={{ padding: "10px 20px",color:"white",fontSize:'30px'}}
       onClick={() => {
         if (elementId) {
           const ele = document.getElementById(elementId);
@@ -51,26 +51,16 @@ function MenuItem(props) {
   );
 }
 
-const Content = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-bottom: 60px;
-`;
-
-
 function Intro() {
   return (
     <div
       id="intro"
-      style={{display:"flex",alignItems:'center',width:'1200px',height:'86px',background:'blue',justifyContent:'space-between',padding:'0 10px'}}>
-        <h1 style={{color:"white",fontSize:'50px',display:'flex',alignItems:'center'}}>
+      style={{display:"flex",alignItems:'center',width:'1200px',height:'66px',justifyContent:'space-between',padding:'0 10px'}}>
+        <h1 style={{color:"white",fontSize:'36px',display:'flex',alignItems:'center'}}>
           <img
             style={{
-              width: "43px",
-              height: "43px",
+              width: "39px",
+              height: "39px",
               marginRight:'7px',
             }}
             src="favicon.png"

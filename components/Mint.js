@@ -275,7 +275,7 @@ function MintSection() {
         alignItems: "center",
       }}>
         <Typography
-          style={{ textAlign: "center", fontSize: '18px', marginRight: '11px', cursor: "pointer", color: "transparent" }}
+          style={{ textAlign: "center", fontSize: '18px', marginRight: '11px', color: "transparent" }}
           variant="h3"
           component="div">
           {"Get Max"}
@@ -318,21 +318,19 @@ function MintSection() {
             setWantMintAmount(wantMintAmount + 1)
           }}
         />
-        <Typography
-          style={{ textAlign: "center", fontSize: '18px', marginLeft: '11px', cursor: "pointer", color: "#fff" }}
-          variant="h3"
-          component="div"
+        <span
+          style={{ textAlign: "center", fontSize: '18px',padding:'11px',cursor: "pointer", color: "#fff" ,'&:hover':{color: 'blue'}}}
           onClick={() => {
             setWantMintAmount(CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted)
           }}>
           {"Get Max"}
-        </Typography>
+        </span>
       </div>
       {mintButton}
       <div style={{ marginTop: '40px', fontSize: '23px', textAlign: "center", color: "#fff" }}>
         Minted：{progress === null ? "Please connect wallet ..." : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}. {CONTRACT_NFT_PER_PRICE} ETH each. <br />A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
       </div>
-    </div>
+    </div >
   );
 }
 

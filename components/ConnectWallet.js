@@ -65,19 +65,6 @@ async function disconnectWallet() {
   await web3ModelInstance.clearCachedProvider();
 }
 
-const NoCollectWallet = styled.div`
-  position: absolute;
-  font-size: 12px;
-  margin-top: 1px;
-  color: #666;
-  text-align: right;
-  @media only screen and (max-width: ${padWidth}) {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-  }
-`;
-
 
 /****
  * 链接钱包的component
@@ -102,7 +89,7 @@ function ConnectWallet(props) {
   if (address && !loading) {
     return (
       <Chip
-        style={{fontSize: '26px',padding:'0 6px',background: "#F3F1EB" }}
+        style={{fontSize: '20px',padding:'0 6px',background: "#F3F1EB" }}
         label={address}
         onDelete={async () => {
           await disconnectWallet();
@@ -116,7 +103,7 @@ function ConnectWallet(props) {
 
   return (
       <Chip
-        style={{fontSize: '26px',padding:'0 6px',background: "#F3F1EB"}}
+        style={{fontSize: '20px',padding:'0 6px',background: "#F3F1EB"}}
         label={loading ? "Connecting..." : "Connect Wallet"}
         onClick={async () => {
           setLoading(true);
