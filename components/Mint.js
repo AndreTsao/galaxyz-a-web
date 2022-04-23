@@ -256,11 +256,16 @@ function MintSection() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        minWidth:'740px'
+        minWidth:'740px',
+        border: "4px dashed #000",
+        padding: "40px",
+        borderRadius: '70px',
+        background: "#175C5B",
+        marginTop:'40px'
       }}>
-      <div style={{ marginBottom: '120px', display: "flex", alignItems: "center" }}>
+      <div style={{display: "flex", alignItems: "center" }}>
         Your wallet{fullAddress && (
-          <span style={{ marginLeft: 10 }}>
+          <span style={{ marginLeft:'10px' }}>
             can mint {CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted} Botties
           </span>
         )}
@@ -270,7 +275,7 @@ function MintSection() {
         alignItems:"center",
       }}>
         <Typography
-          style={{ textAlign: "center",fontSize: 20,marginRight:20,cursor: "pointer",color: "transparent"}}
+          style={{textAlign: "center",fontSize: '18px',marginRight:'11px',cursor: "pointer",color: "transparent"}}
           variant="h3"
           component="div">
           {"Get Max"}
@@ -278,9 +283,8 @@ function MintSection() {
         <img
           style={{
             cursor: "pointer",
-            width: 60,
-            height: 60,
-            marginRight: "40px",
+            width: '70px',
+            height: '70px'
           }}
           src="/images/minus.png"
           onClick={()=>{
@@ -292,7 +296,7 @@ function MintSection() {
           }}
         />
         <Typography
-          style={{ textAlign: "center",fontSize: 150, minWidth:260,color: "#fff"}}
+          style={{ textAlign: "center",fontSize: '100px', minWidth:'184px',color: "#fff"}}
           variant="h3"
           component="div"
         >
@@ -302,9 +306,8 @@ function MintSection() {
         <img
           style={{
             cursor: "pointer",
-            width: 60,
-            height: 60,
-            marginLeft: "40px",
+            width: '70px',
+            height: '70px',
           }}
           src="/images/plus.png"
           onClick={()=>{
@@ -316,7 +319,7 @@ function MintSection() {
           }}
         />
         <Typography
-          style={{ textAlign: "center",fontSize: 20,marginLeft:20,cursor: "pointer",color: "#fff"}}
+          style={{ textAlign: "center",fontSize:'18px',marginLeft:'11px',cursor: "pointer",color: "#fff"}}
           variant="h3"
           component="div"
           onClick={()=>{
@@ -326,9 +329,8 @@ function MintSection() {
         </Typography>
       </div>
       {mintButton}
-      <div style={{ marginTop: 120, fontSize: 25, textAlign: "center",color: "#fff"}}>
+      <div style={{ marginTop: '40px', fontSize: '23px', textAlign: "center",color: "#fff"}}>
         Minted：{progress === null ? "Please connect wallet ..." : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}. {CONTRACT_NFT_PER_PRICE} ETH each. <br/>A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
-        
       </div>
     </div>
   );
@@ -337,21 +339,9 @@ function MintSection() {
 function Mint() {
   return (
     <div
-      style={{display:"flex",background:'blue',width:'100%',height:'1200px',padding: '0 3%',backgroundImage:`url(/images/home_background.png)`,backgroundSize:'100%',backgroundRepeat:'no-repeat'}}
+      style={{display:"flex",width:'100%',height:'950px',backgroundImage:`url(/images/home_background.png)`,backgroundSize:'cover',backgroundRepeat:'no-repeat',alignItems:'center',justifyContent:'center'}}
       id="mint">
-        <div
-          style={{
-            marginTop: 60,
-            border: "4px dashed #000",
-            padding: "40px",
-            borderRadius: 20,
-            marginRight:50,
-            marginLeft:50,
-            background: "#175C5B",
-          }}
-        >
-          <MintSection />
-        </div>
+        <MintSection/>
     </div>
   );
 }

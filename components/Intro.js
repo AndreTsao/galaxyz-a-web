@@ -37,7 +37,7 @@ function MenuItem(props) {
   const elementId = props.elementId;
   return (
     <MenuItemText
-      style={{ padding: "10px 20px",color:"white"}}
+      style={{ padding: "10px 20px",color:"white",fontSize:'40px'}}
       onClick={() => {
         if (elementId) {
           const ele = document.getElementById(elementId);
@@ -65,10 +65,8 @@ function Intro() {
   return (
     <div
       id="intro"
-      style={{display:"flex",flexDirection:'column',width:'1200px',background:'blue'}}
-      >
-      <Head>
-        <h1 style={{color:"white",fontSize:'50px',display:'flex'}}>
+      style={{display:"flex",alignItems:'center',width:'1200px',height:'86px',background:'blue',justifyContent:'space-between',padding:'0 10px'}}>
+        <h1 style={{color:"white",fontSize:'50px',display:'flex',alignItems:'center'}}>
           <img
             style={{
               width: "43px",
@@ -84,7 +82,6 @@ function Intro() {
           <MenuItem elementId="faq">F.A.Q</MenuItem>
         </MenuWrapper>
         <ConnectWallet showCollect={true} />
-      </Head>
     </div>
   );
 }
