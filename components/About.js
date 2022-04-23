@@ -17,20 +17,20 @@ function About() {
     <Container
       id="about">
       <Typography
-        style={{ textAlign: "center", marginTop: "5%", color:'white'}}
+        style={{ textAlign: "center", marginTop: "7%", color: 'white' }}
         variant="h3"
         gutterBottom
         component="div">
         ABOUT
       </Typography>
-        <Typography
-          style={{marginTop:30, marginBottom: 20, color:'white'}}
-          variant="body1"
-          gutterBottom>
+      <Typography
+        style={{ marginBottom: '20px', color: 'white' }}
+        variant="body1"
+        gutterBottom>
         Tocabo is an exclusive NFT collection of 5555 toucans NFT living on the Ethereum blockchain.
         Become a part of TTC with our 10,000 unique NFTs. These are not just any NFT living on Ethereum blockchain but this NFT will give you VIP access and free objects in the most anticipated and exciting digital race in the history of Metaverse.
         Our privileged TTC family will enjoy member-only benefits, membership cards, TTC tokens (to be launched soon), and other perks. So, take a leap from the world of web3 to the Metaverse and join The Tiger Clan (TTC). Check out our website/roadmap now!
-        </Typography>
+      </Typography>
     </Container>
   );
 }

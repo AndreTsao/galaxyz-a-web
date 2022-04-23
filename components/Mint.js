@@ -256,26 +256,26 @@ function MintSection() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        minWidth:'740px',
+        minWidth: '740px',
         border: "4px dashed #000",
         padding: "40px",
         borderRadius: '70px',
         background: "#175C5B",
-        marginTop:'40px'
+        marginTop: '40px'
       }}>
-      <div style={{display: "flex", alignItems: "center" }}>
+      <div style={{ display: "flex", alignItems: "center", color: 'white' }}>
         Your wallet{fullAddress && (
-          <span style={{ marginLeft:'10px' }}>
+          <span style={{ marginLeft: '10px' }}>
             can mint {CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted} Botties
           </span>
         )}
       </div>
       <div style={{
         display: "flex",
-        alignItems:"center",
+        alignItems: "center",
       }}>
         <Typography
-          style={{textAlign: "center",fontSize: '18px',marginRight:'11px',cursor: "pointer",color: "transparent"}}
+          style={{ textAlign: "center", fontSize: '18px', marginRight: '11px', cursor: "pointer", color: "transparent" }}
           variant="h3"
           component="div">
           {"Get Max"}
@@ -287,16 +287,16 @@ function MintSection() {
             height: '70px'
           }}
           src="/images/minus.png"
-          onClick={()=>{
-            if(wantMintAmount <=0){
+          onClick={() => {
+            if (wantMintAmount <= 0) {
               setWantMintAmount(0)
               return;
             }
-            setWantMintAmount(wantMintAmount-1)
+            setWantMintAmount(wantMintAmount - 1)
           }}
         />
         <Typography
-          style={{ textAlign: "center",fontSize: '100px', minWidth:'184px',color: "#fff"}}
+          style={{ textAlign: "center", fontSize: '100px', minWidth: '184px', color: "#fff" }}
           variant="h3"
           component="div"
         >
@@ -310,27 +310,27 @@ function MintSection() {
             height: '70px',
           }}
           src="/images/plus.png"
-          onClick={()=>{
-            if(wantMintAmount >= CONTRACT_PERWALLET_MAX_MINT_AMOUNT- numberMinted){
-              setWantMintAmount(CONTRACT_PERWALLET_MAX_MINT_AMOUNT- numberMinted)
+          onClick={() => {
+            if (wantMintAmount >= CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted) {
+              setWantMintAmount(CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted)
               return;
             }
-            setWantMintAmount(wantMintAmount+1)
+            setWantMintAmount(wantMintAmount + 1)
           }}
         />
         <Typography
-          style={{ textAlign: "center",fontSize:'18px',marginLeft:'11px',cursor: "pointer",color: "#fff"}}
+          style={{ textAlign: "center", fontSize: '18px', marginLeft: '11px', cursor: "pointer", color: "#fff" }}
           variant="h3"
           component="div"
-          onClick={()=>{
-            setWantMintAmount( CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted)
+          onClick={() => {
+            setWantMintAmount(CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted)
           }}>
           {"Get Max"}
         </Typography>
       </div>
       {mintButton}
-      <div style={{ marginTop: '40px', fontSize: '23px', textAlign: "center",color: "#fff"}}>
-        Minted：{progress === null ? "Please connect wallet ..." : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}. {CONTRACT_NFT_PER_PRICE} ETH each. <br/>A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
+      <div style={{ marginTop: '40px', fontSize: '23px', textAlign: "center", color: "#fff" }}>
+        Minted：{progress === null ? "Please connect wallet ..." : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}. {CONTRACT_NFT_PER_PRICE} ETH each. <br />A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
       </div>
     </div>
   );
@@ -339,9 +339,9 @@ function MintSection() {
 function Mint() {
   return (
     <div
-      style={{display:"flex",width:'100%',height:'950px',backgroundImage:`url(/images/home_background.png)`,backgroundSize:'cover',backgroundRepeat:'no-repeat',alignItems:'center',justifyContent:'center'}}
+      style={{ display: "flex", width: '100%', height: '950px', backgroundImage: `url(/images/home_background.png)`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', alignItems: 'center', justifyContent: 'center' }}
       id="mint">
-        <MintSection/>
+      <MintSection />
     </div>
   );
 }
