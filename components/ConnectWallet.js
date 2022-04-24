@@ -89,7 +89,7 @@ function ConnectWallet(props) {
   if (address && !loading) {
     return (
       <Chip
-        style={{fontSize: '20px',padding:'0 6px',background: "#F3F1EB" }}
+        style={{fontSize: '21px',padding:'0 5px',background: "#F0F0F0",fontFamily:'BradleyHandITCTT-Bold'}}
         label={address}
         onDelete={async () => {
           await disconnectWallet();
@@ -103,7 +103,7 @@ function ConnectWallet(props) {
 
   return (
       <Chip
-        style={{fontSize: '20px',padding:'0 6px',background: "#F3F1EB"}}
+        style={{fontSize: '21px',padding:'0 5px',background: "#F0F0F0",fontFamily:'BradleyHandITCTT-Bold'}}
         label={loading ? "Connecting..." : "Connect Wallet"}
         onClick={async () => {
           setLoading(true);

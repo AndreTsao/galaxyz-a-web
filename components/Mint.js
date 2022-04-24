@@ -22,8 +22,7 @@ const ETHERSCAN_DOMAIN =
     ? "etherscan.io"
     : "rinkeby.etherscan.io";
 
-const GetMaxSpan = styled.span`
-  text-align: center;
+const GetMaxSpan = styled.div`
   cursor: pointer;
   :hover {
     font-weight: bold;
@@ -273,7 +272,7 @@ function MintSection() {
         alignItems: "center",
       }}>
         <span
-          style={{ textAlign: "center", fontSize: '18px', padding: '11px', color: "transparent" }}
+          style={{ textAlign: "center", fontSize: '22px', padding: '11px', color: "transparent",fontFamily:'BradleyHandITCTT-Bold'}}
           >
           {"Get Max"}
         </span>
@@ -293,7 +292,7 @@ function MintSection() {
           }}
         />
         <Typography
-          style={{ textAlign: "center", fontSize: '100px', minWidth: '184px', color: "#fff" }}
+          style={{ textAlign: "center", fontSize: '100px', minWidth: '184px', color: "#fff"}}
           variant="h3"
           component="div"
         >
@@ -317,9 +316,10 @@ function MintSection() {
         />
         <GetMaxSpan
           style={{
-            fontSize: '18px',
+            fontSize: '22px',
             padding: '11px',
-            color: 'fff'
+            fontFamily:'BradleyHandITCTT-Bold',
+            color:'#F0F0F0'
           }}
           onClick={() => {
             setWantMintAmount(CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted)

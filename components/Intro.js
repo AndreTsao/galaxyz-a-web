@@ -37,7 +37,7 @@ function MenuItem(props) {
   const elementId = props.elementId;
   return (
     <MenuItemText
-      style={{ padding: "10px 20px",color:"white",fontSize:'30px'}}
+      style={{ padding: "10px 24px",color:"white",fontSize:'28px',fontFamily:'BradleyHandITCTT-Bold'}}
       onClick={() => {
         if (elementId) {
           const ele = document.getElementById(elementId);
@@ -56,7 +56,7 @@ function Intro() {
     <div
       id="intro"
       style={{display:"flex",alignItems:'center',width:'1200px',height:'66px',justifyContent:'space-between',padding:'0 10px'}}>
-        <h1 style={{color:"white",fontSize:'36px',display:'flex',alignItems:'center'}}>
+        <h1 style={{color:"white",fontSize:'36px',display:'flex',alignItems:'center',fontFamily:'BradleyHandITCTT-Bold'}}>
           <img
             style={{
               width: "39px",

@@ -17,7 +17,7 @@ function About() {
     <Container
       id="about">
       <Typography
-        style={{ textAlign: "center", marginTop: "7%", color: 'white' }}
+        style={{ textAlign: "center", marginTop: "7%", color: 'white',fontFamily:'BradleyHandITCTT-Bold'}}
         variant="h3"
         gutterBottom
         component="div">

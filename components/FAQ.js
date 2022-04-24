@@ -26,7 +26,7 @@ function FAQ() {
     <Container
       id="faq">
       <Typography
-        style={{ textAlign: "center", marginTop: "5%", color: 'white' }}
+        style={{ textAlign: "center", marginTop: "5%", color: 'white',fontFamily:'BradleyHandITCTT-Bold'}}
         variant="h3"
         gutterBottom
         component="div">
