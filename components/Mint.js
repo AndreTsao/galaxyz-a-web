@@ -261,12 +261,8 @@ function MintSection() {
         background: "#175C5B",
         marginTop: '50px'
       }}>
-      <div style={{ display: "flex", alignItems: "center", color: 'white' }}>
-        Your wallet{fullAddress && (
-          <span style={{ marginLeft: '10px' }}>
-            can mint {CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted} Botties
-          </span>
-        )}
+      <div style={{ display: "flex", alignItems: "center", color: 'white' ,fontSize:'18px'}}>
+        {progress === null ? "..." : progress} / {CONTRACT_NFT_TOTAL_AMOUNT} {CONTRACT_NFT_PER_PRICE} ETH each. 
       </div>
       <div style={{
         display: "flex",
@@ -331,7 +327,6 @@ function MintSection() {
       </div>
       {mintButton}
       <div style={{ marginTop: '40px', fontSize: '23px', textAlign: "center", color: "#fff" }}>
-        Minted：{progress === null ? "Please connect wallet ..." : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}  {CONTRACT_NFT_PER_PRICE} ETH each. 
         <br />A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
         <br />1, Every TocaboNFT will get a piece of TocaIsland land for free!
         <br />2, Holder with more than 4 TocaboNFTs will be airdropped a TocaboTreeNFT 
