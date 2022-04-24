@@ -13,7 +13,7 @@ const Content = styled.div`
 
 function BottomPart() {
   return (
-    <div style={{display:'flex',flexDirection:'column',alignItems:'center',padding:'70px 0 20px'}}>
+    <div style={{display:'flex',flexDirection:'column',alignItems:'center',paddingTop:'70px'}}>
       <div>
       <Tooltip title="Twitter">
         <a
@@ -57,7 +57,7 @@ function BottomPart() {
         </a>
       </Tooltip>
       </div>
-      <Typography style={{color: 'white', fontSize:'12px',paddingTop:'9px'}}>© 2022 TOCAISLAND. ALL RIGHTS RESERVED</Typography>
+      <Typography style={{color: 'white', fontSize:'12px',paddingTop:'32px'}}>© 2022 TOCAISLAND. ALL RIGHTS RESERVED</Typography>
     </div>
   );
 }

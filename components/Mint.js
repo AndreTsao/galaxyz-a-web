@@ -31,11 +31,12 @@ const GetMaxSpan = styled.div`
 
 const StyledMintButton = styled.div`
   display: inline-block;
-  width: 180px;
   text-align: center;
-  padding: 10px 10px;
+  padding: 15px 15px;
   border: 4px solid #000;
-  border-radius: 20px;
+  font-family: 'BradleyHandITCTT-Bold';
+  font-size: 39px;
+  border-radius: 35px;
   color: #000;
   background: #dde4b6;
   cursor: ${(props) => {
@@ -232,7 +233,7 @@ function MintSection() {
       </StyledMintButton>
     );
   }
-
+ console.log('mint---fullAddress',fullAddress)
   if (!fullAddress) {//没有连接钱包时卡住mint按钮
     mintButton = (
       <StyledMintButton
@@ -255,10 +256,10 @@ function MintSection() {
         alignItems: "center",
         minWidth: '740px',
         border: "4px dashed #000",
-        padding: "40px",
+        padding: "40px 60px 27px",
         borderRadius: '70px',
         background: "#175C5B",
-        marginTop: '40px'
+        marginTop: '50px'
       }}>
       <div style={{ display: "flex", alignItems: "center", color: 'white' }}>
         Your wallet{fullAddress && (
@@ -270,6 +271,7 @@ function MintSection() {
       <div style={{
         display: "flex",
         alignItems: "center",
+        marginBottom:'20px'
       }}>
         <span
           style={{ textAlign: "center", fontSize: '22px', padding: '11px', color: "transparent",fontFamily:'BradleyHandITCTT-Bold'}}
@@ -279,8 +281,8 @@ function MintSection() {
         <img
           style={{
             cursor: "pointer",
-            width: '70px',
-            height: '70px'
+            width: '60px',
+            height: '60px'
           }}
           src="/images/minus.png"
           onClick={() => {
@@ -292,7 +294,7 @@ function MintSection() {
           }}
         />
         <Typography
-          style={{ textAlign: "center", fontSize: '100px', minWidth: '184px', color: "#fff"}}
+          style={{ textAlign: "center", fontSize: '100px', minWidth: '184px', color: "#fff",fontFamily:'math'}}
           variant="h3"
           component="div"
         >
@@ -302,8 +304,8 @@ function MintSection() {
         <img
           style={{
             cursor: "pointer",
-            width: '70px',
-            height: '70px',
+            width: '60px',
+            height: '60px',
           }}
           src="/images/plus.png"
           onClick={() => {
@@ -329,7 +331,10 @@ function MintSection() {
       </div>
       {mintButton}
       <div style={{ marginTop: '40px', fontSize: '23px', textAlign: "center", color: "#fff" }}>
-        Minted：{progress === null ? "Please connect wallet ..." : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}. {CONTRACT_NFT_PER_PRICE} ETH each. <br />A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
+        Minted：{progress === null ? "Please connect wallet ..." : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}  {CONTRACT_NFT_PER_PRICE} ETH each. 
+        <br />A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
+        <br />1, Every TocaboNFT will get a piece of TocaIsland land for free!
+        <br />2, Holder with more than 4 TocaboNFTs will be airdropped a TocaboTreeNFT 
       </div>
     </div >
   );
