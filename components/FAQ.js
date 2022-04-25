@@ -33,15 +33,14 @@ function FAQ() {
         FAQs
       </Typography>
       {getFAQItem('Minting',
-        `1,The total supply of TocaboNFTs is ${CONTRACT_NFT_TOTAL_AMOUNT}.\n A maximum of 10 Tocabo NFTs can be minted per wallet. The minting price is ${CONTRACT_NFT_PER_PRICE} ETH. No pre-sale, only public sale. 
-      2, The total supply of TocaboTreeNFTs is 2833. We will AirDrop all of TocaboTreeNFTs for the Tocabo holder who have at least 2 TocaboNFTs. 
-      3, 70% of TocaIsland land will be AirDropped to the holder who stake Tocabos and TocaoWorms Token.`)}
+        `1,The total supply of TocaboNFTs is ${CONTRACT_NFT_TOTAL_AMOUNT}. A maximum of 10 Tocabo NFTs can be minted per wallet. The minting price is ${CONTRACT_NFT_PER_PRICE} ETH. No pre-sale, only public sale. 
+      2, The total supply of TocaboTreeNFT is 5555. Holder with more than 4 TocaboNFTs will be airdropped a TocaboTreeNFT. `)}
+      {getFAQItem('What about the secondary market (like OpenSea) royalty fee?',
+        '1,70% of TocaIsland land will be AirDropped to the holder who stake Tocabos and TocaoWorms Token.2, The TocaIsland community congress will hold 22% of TocaIsland land.3, 8% of TocaIsland land will be AirDropped to TocaIsland team.')}
       {getFAQItem('Who is team behind TocaIsland?',
-        '没啥卵用，就是个头像。购买之后您将拥有对您持有 NFT的无限使用权，对，就是那个')}
+        'We are a creative and passionate team from all over the world.')}
       {getFAQItem('Contrtact Adress',
         'TocaboNFTs:xxxxxxxxx  TocaboTreeNFTs: Coming soon...  TocaboTreeNFTs: Coming soon...  $TocaWorm: Coming soon... TocaIsland Metaverse: Coming soon...')}
-      {getFAQItem('What about the secondary market (like OpenSea) royalty fee?',
-        '7% (note that the majority of royalties will be used for the prizepool of TocaIsland).')}
       {getFAQItem('What about the secondary market (like OpenSea) royalty fee?',
         '7% (note that the majority of royalties will be used for the prizepool of TocaIsland).')}
     </Container>

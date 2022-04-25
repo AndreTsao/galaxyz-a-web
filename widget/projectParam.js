@@ -9,8 +9,8 @@ const CONTRACT_STATUS = {
   'SOLD_OUT': '2',
 }
 const SOCIAL_MEDIA_URL = {
-  'OPENSEA': 'https://opensea.io/collection/gclx',
-  'LOOKSRARE': 'LOOKSRARE',
+  'OPENSEA': 'https://opensea.io/',
+  'DISCORD': 'https://https://discord.com/',
   'TWITTER': 'https://twitter.com/TocaIsland',
 }
 

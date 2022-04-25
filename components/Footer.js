@@ -45,7 +45,7 @@ function BottomPart() {
       </Tooltip>
       <Tooltip title="LooksRare">
         <a
-          href= {SOCIAL_MEDIA_URL.LOOKSRARE}
+          href= {SOCIAL_MEDIA_URL.DISCORD}
           target="_blank"
           rel="noreferrer">
           <img
