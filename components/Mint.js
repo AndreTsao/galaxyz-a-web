@@ -33,13 +33,16 @@ const GetMaxSpan = styled.div`
 const StyledMintButton = styled.div`
   display: inline-block;
   text-align: center;
-  padding: 15px 15px;
+  padding: 10px 15px;
   border: 4px solid #000;
   font-family: 'BradleyHandITCTT-Bold';
-  font-size: 39px;
+  font-size: 1.8rem;
   border-radius: 35px;
   color: #000;
   background: #dde4b6;
+  @media only screen and (max-width: ${padWidth}) {
+  font-size: 1.4rem;
+  }
   cursor: ${(props) => {
     return props.minting || props.disabled ? "not-allowed" : "pointer";
   }};
@@ -254,7 +257,7 @@ function MintSection() {
     flex-direction: column;
     align-items: center;
     //border: 4px dashed #000;
-    padding: 40px 60px 27px;
+    padding: 70px 60px 30px;
     border-radius: 70px;
     background: #181E29;
     overflow: hidden;
@@ -265,7 +268,7 @@ function MintSection() {
   return (
     <MintboxContainer>
       <div style={{ display: "flex", alignItems: "center", color: 'white', fontSize: '18px' }}>
-        {progress === null ? "..." : progress} / {CONTRACT_NFT_TOTAL_AMOUNT} {CONTRACT_NFT_PER_PRICE} ETH each.
+        {progress === null ? " ? " : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}
       </div>
       <div style={{
         display: "flex",
@@ -293,7 +296,7 @@ function MintSection() {
           }}
         />
         <Typography
-          style={{ textAlign: "center", fontSize: '100px', padding: '0 38px', color: "#fff", fontFamily: 'math' }}
+          style={{ textAlign: "center", fontSize: '100px', padding: '0 38px', color: "#fff" }}
           variant="h3"
           component="div"
         >
@@ -329,8 +332,8 @@ function MintSection() {
         </GetMaxSpan>
       </div>
       {mintButton}
-      <div style={{ marginTop: '40px', fontSize: '23px', textAlign: "center", color: "#fff" }}>
-        <br />A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
+      <div style={{ fontSize: '16px', textAlign: "center", color: "#fff" }}>
+        <br />{CONTRACT_NFT_PER_PRICE} ETH each. A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
         <br />1, Every TocaboNFT will get a piece of TocaIsland land for free!
         <br />2, Holder with more than 4 TocaboNFTs will be airdropped a TocaboTreeNFT
       </div>

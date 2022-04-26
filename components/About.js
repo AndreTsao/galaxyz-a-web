@@ -34,8 +34,8 @@ function About() {
         The ecosystem in TocaIsland is mainly composed of TocaboNFT(Bigmouth bird)🐧, TocaTreeNFT🌴 and $TocaWorm Token🪱.
         A Tocabo will get a piece of TocaIsland  land for free!The stronger a Tocabo,the more territory it has in TocaIsland.
         TocaTree produce $TocaWorm Token.The more $TocaWorm a Tocabo eats, the stronger it will become.
-        TocaboNFT is an exclusive NFT collection of 5555 toucans NFT.
-        TocaTreeNFT is an exclusive NFT collection of 5555 many kinds of trees NFT.
+        TocaboNFT is an exclusive NFT collection of 5666 toucans NFT.
+        TocaTreeNFT is an exclusive NFT collection of 5666 many kinds of trees NFT.
         The total supply of $TocaWorm Token is 1,000,000,000.
         TocaIsland covers 50,000 acres.
       </Typography>

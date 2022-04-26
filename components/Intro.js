@@ -32,7 +32,7 @@ const MenuItemText = styled.span`
   cursor: pointer;
   font-size:28px;
   text-align: center;
-  padding: 0 24px;
+  padding: 0 26px;
   color: white;
   font-family: BradleyHandITCTT-Bold;
   flex-wrap: wrap;
@@ -71,7 +71,7 @@ const IntroContainer = styled.div`
   justify-content: space-between;
   overflow: hidden;
   @media only screen and (max-width: ${padWidth}) {
-  padding: 10px 0;
+  padding: 10px 0 16px;
   flex-direction: column;
   }
   `;
@@ -80,7 +80,8 @@ function Intro() {
   return (
     <IntroContainer
       id="intro">
-        <div style={{color:"white",fontSize:'45px',display:'flex',alignItems:'center',fontFamily:'BradleyHandITCTT-Bold'}}>
+        <div style={{color:"white",fontSize:'45px',display:'flex',alignItems:'center',
+        fontFamily:'BradleyHandITCTT-Bold',letterSpacing:'2px'}}>
           <img
             style={{
               width: "39px",
