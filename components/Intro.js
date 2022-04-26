@@ -18,6 +18,7 @@ const Head = styled.div`
 const MenuWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 0 68px;
   @media only screen and (max-width: ${padWidth}) {
     margin-bottom: 20px;
     flex-wrap: wrap;
@@ -55,7 +56,7 @@ function Intro() {
   return (
     <div
       id="intro"
-      style={{display:"flex",alignItems:'center',width:'1200px',height:'66px',justifyContent:'space-between',padding:'0 10px'}}>
+      style={{display:"flex",alignItems:'center',maxWidth:'1200px',height:'66px',justifyContent:'space-between',padding:'0 10px'}}>
         <h1 style={{color:"white",fontSize:'42px',display:'flex',alignItems:'center',fontFamily:'BradleyHandITCTT-Bold'}}>
           <img
             style={{

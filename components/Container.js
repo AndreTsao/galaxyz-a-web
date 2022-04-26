@@ -1,6 +1,6 @@
 import { padWidth } from "../widget/utils";
 
-const mediaStyle = `@media only screen and (max-width: ${padWidth}) {padding: 30px 0;}`
+const mediaStyle = `@media only screen and (max-width: ${padWidth}) {padding: 30px 0}`
 
 
 function Container(props) {

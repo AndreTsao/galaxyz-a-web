@@ -14,6 +14,7 @@ import {
   CONTRACT_NFT_PER_PRICE,
   CONTRACT_STATUS
 } from "../widget/projectParam";
+import { padWidth } from "../widget/utils";
 
 
 
@@ -233,7 +234,7 @@ function MintSection() {
       </StyledMintButton>
     );
   }
- console.log('mint---fullAddress',fullAddress)
+  console.log('mint---fullAddress', fullAddress)
   if (!fullAddress) {//没有连接钱包时卡住mint按钮
     mintButton = (
       <StyledMintButton
@@ -248,30 +249,32 @@ function MintSection() {
     );
   }
 
+  const MintboxContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px dashed #000;
+    padding: 40px 60px 27px;
+    border-radius: 70px;
+    background: #175C5B;
+    overflow: hidden;
+    @media only screen and (max-width: ${padWidth}) {
+    width: 92%;
+  }`;
+
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        minWidth: '740px',
-        border: "4px dashed #000",
-        padding: "40px 60px 27px",
-        borderRadius: '70px',
-        background: "#175C5B",
-        marginTop: '50px'
-      }}>
-      <div style={{ display: "flex", alignItems: "center", color: 'white' ,fontSize:'18px'}}>
-        {progress === null ? "..." : progress} / {CONTRACT_NFT_TOTAL_AMOUNT} {CONTRACT_NFT_PER_PRICE} ETH each. 
+    <MintboxContainer>
+      <div style={{ display: "flex", alignItems: "center", color: 'white', fontSize: '18px' }}>
+        {progress === null ? "..." : progress} / {CONTRACT_NFT_TOTAL_AMOUNT} {CONTRACT_NFT_PER_PRICE} ETH each.
       </div>
       <div style={{
         display: "flex",
         alignItems: "center",
-        marginBottom:'20px'
+        marginBottom: '20px'
       }}>
         <span
-          style={{ textAlign: "center", fontSize: '22px', padding: '11px', color: "transparent",fontFamily:'BradleyHandITCTT-Bold'}}
-          >
+          style={{ textAlign: "center", fontSize: '22px', padding: '11px', color: "transparent", fontFamily: 'BradleyHandITCTT-Bold' }}
+        >
           {"Get Max"}
         </span>
         <img
@@ -290,7 +293,7 @@ function MintSection() {
           }}
         />
         <Typography
-          style={{ textAlign: "center", fontSize: '100px', minWidth: '184px', color: "#fff",fontFamily:'math'}}
+          style={{ textAlign: "center", fontSize: '100px', padding: '0 38px', color: "#fff", fontFamily: 'math' }}
           variant="h3"
           component="div"
         >
@@ -316,8 +319,8 @@ function MintSection() {
           style={{
             fontSize: '22px',
             padding: '11px',
-            fontFamily:'BradleyHandITCTT-Bold',
-            color:'#F0F0F0'
+            fontFamily: 'BradleyHandITCTT-Bold',
+            color: '#F0F0F0'
           }}
           onClick={() => {
             setWantMintAmount(CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted)
@@ -329,19 +332,33 @@ function MintSection() {
       <div style={{ marginTop: '40px', fontSize: '23px', textAlign: "center", color: "#fff" }}>
         <br />A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
         <br />1, Every TocaboNFT will get a piece of TocaIsland land for free!
-        <br />2, Holder with more than 4 TocaboNFTs will be airdropped a TocaboTreeNFT 
+        <br />2, Holder with more than 4 TocaboNFTs will be airdropped a TocaboTreeNFT
       </div>
-    </div >
+    </MintboxContainer >
   );
 }
 
+const MintContainer = styled.div`
+    display: flex;
+    width: 100%;
+    height: 920px;
+    background-image: url(/images/home_background.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    @media only screen and (max-width: ${padWidth}) {
+    height: auto;
+    padding: 22px 0 18px;
+  }`;
+
 function Mint() {
   return (
-    <div
-      style={{ display: "flex", width: '100%', height: '950px', backgroundImage: `url(/images/home_background.png)`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', alignItems: 'center', justifyContent: 'center' }}
+    <MintContainer
       id="mint">
       <MintSection />
-    </div>
+    </MintContainer>
   );
 }
 
