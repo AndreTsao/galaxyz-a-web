@@ -5,6 +5,7 @@ import Container from "./Container";
 import ConnectWallet from "./ConnectWallet";
 import { padWidth } from "../widget/utils";
 import { CONTRACT_NFT_OFFICIAL_NAME, SOCIAL_MEDIA_URL } from "../widget/projectParam";
+import { blue } from "@mui/material/colors";
 
 const Head = styled.div`
   display: flex;
@@ -65,7 +66,7 @@ const IntroContainer = styled.div`
   display: flex;
   align-items:center;
   width: 90%;
-  padding:'0 10px';
+  padding:12px 10px;
   max-width: 1400px;
   justify-content: space-between;
   overflow: hidden;
@@ -79,7 +80,7 @@ function Intro() {
   return (
     <IntroContainer
       id="intro">
-        <h1 style={{color:"white",fontSize:'42px',display:'flex',alignItems:'center',fontFamily:'BradleyHandITCTT-Bold'}}>
+        <div style={{color:"white",fontSize:'45px',display:'flex',alignItems:'center',fontFamily:'BradleyHandITCTT-Bold'}}>
           <img
             style={{
               width: "39px",
@@ -87,7 +88,7 @@ function Intro() {
               marginRight:'7px',
             }}
             src="favicon.png"
-          />TocaIsland</h1>
+          />TocaIsland</div>
         <MenuWrapper>
           <MenuItem elementId="intro">Home</MenuItem>
           <MenuItem elementId="about">About</MenuItem>
