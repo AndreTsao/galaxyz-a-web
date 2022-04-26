@@ -23,14 +23,24 @@ const MenuWrapper = styled.div`
     margin-bottom: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    padding:0 0;
   }
 `;
 
 const MenuItemText = styled.span`
   cursor: pointer;
-  font-size:30px;
+  font-size:28px;
+  text-align: center;
+  padding: 0 24px;
+  color: white;
+  font-family: BradleyHandITCTT-Bold;
+  flex-wrap: wrap;
   :hover {
     font-weight: bold;
+  }
+  @media only screen and (max-width: ${padWidth}) {
+    font-size: 20px;
+    padding: 0 12px;
   }
 `;
 
@@ -38,7 +48,6 @@ function MenuItem(props) {
   const elementId = props.elementId;
   return (
     <MenuItemText
-      style={{ padding: "10px 24px",color:"white",fontSize:'28px',fontFamily:'BradleyHandITCTT-Bold'}}
       onClick={() => {
         if (elementId) {
           const ele = document.getElementById(elementId);
@@ -52,11 +61,24 @@ function MenuItem(props) {
   );
 }
 
+const IntroContainer = styled.div`
+  display: flex;
+  align-items:center;
+  width: 90%;
+  padding:'0 10px';
+  max-width: 1400px;
+  justify-content: space-between;
+  overflow: hidden;
+  @media only screen and (max-width: ${padWidth}) {
+  padding: 10px 0;
+  flex-direction: column;
+  }
+  `;
+
 function Intro() {
   return (
-    <div
-      id="intro"
-      style={{display:"flex",alignItems:'center',maxWidth:'1200px',height:'66px',justifyContent:'space-between',padding:'0 10px'}}>
+    <IntroContainer
+      id="intro">
         <h1 style={{color:"white",fontSize:'42px',display:'flex',alignItems:'center',fontFamily:'BradleyHandITCTT-Bold'}}>
           <img
             style={{
@@ -73,7 +95,7 @@ function Intro() {
           <MenuItem elementId="faq">F.A.Q</MenuItem>
         </MenuWrapper>
         <ConnectWallet showCollect={true} />
-    </div>
+    </IntroContainer>
   );
 }
 

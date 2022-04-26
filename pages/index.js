@@ -42,7 +42,7 @@ export default function Home() {
           }}
         />
       </Head>
-      {/* <Intro /> */}
+      <Intro />
       <Mint />
       <About />
       <Roadmap />
