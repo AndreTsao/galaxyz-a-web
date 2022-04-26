@@ -253,10 +253,10 @@ function MintSection() {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 4px dashed #000;
+    //border: 4px dashed #000;
     padding: 40px 60px 27px;
     border-radius: 70px;
-    background: #175C5B;
+    background: #181E29;
     overflow: hidden;
     @media only screen and (max-width: ${padWidth}) {
     width: 92%;

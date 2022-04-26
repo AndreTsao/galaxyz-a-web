@@ -5,6 +5,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { padWidth } from "../widget/utils";
 import { CONTRACT_NFT_PER_PRICE, CONTRACT_NFT_TOTAL_AMOUNT } from "../widget/projectParam";
 
 function getFAQItem(title, content) {
@@ -21,9 +22,20 @@ function getFAQItem(title, content) {
     </Accordion>);
 }
 
+const FAQContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  @media only screen and (max-width: ${padWidth}) {
+  padding: 3% 0;
+  }
+  `; 
+
 function FAQ() {
   return (
-    <Container
+    <FAQContainer
       id="faq">
       <Typography
         style={{ textAlign: "center", marginTop: "5%", color: 'white',fontFamily:'BradleyHandITCTT-Bold'}}
@@ -43,7 +55,7 @@ function FAQ() {
         'TocaboNFTs:xxxxxxxxx  TocaboTreeNFTs: Coming soon...  TocaboTreeNFTs: Coming soon...  $TocaWorm: Coming soon... TocaIsland Metaverse: Coming soon...')}
       {getFAQItem('What about the secondary market (like OpenSea) royalty fee?',
         '7% (note that the majority of royalties will be used for the prizepool of TocaIsland).')}
-    </Container>
+    </FAQContainer>
   );
 }
 

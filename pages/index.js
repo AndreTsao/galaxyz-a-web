@@ -18,7 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{ display: "flex", width: '100%', flexDirection: "column", alignItems: "center", paddingBottom: '40px' }}>
+    <div style={{ display: "flex",width: '100%', flexDirection: "column", alignItems: "center", paddingBottom: '40px' }}>
       <Head>
         <title>TocaIsland - Enter metaverse </title>
         <meta name="description" content="Tocabo is an exclusive NFT collection of 5555 toucans NFT living on the Ethereum blockchain. Each Tocabo NFT is 1 of 1 based on a combination of multiple random attributes." />
@@ -45,7 +45,7 @@ export default function Home() {
       {/* <Intro /> */}
       <Mint />
       <About />
-      {/* <Roadmap /> */}
+      <Roadmap />
       <FAQ />
       <Footer />
     </div>

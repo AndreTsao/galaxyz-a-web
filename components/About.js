@@ -3,18 +3,21 @@ import Container from "./Container";
 import Typography from "@mui/material/Typography";
 import { padWidth } from "../widget/utils";
 
-// const Content = styled.div`
-//   max-width: 840px;
-//   margin: 5% auto 5% auto;
-//   strong {
-//     color: red;
-//   }
-// `;
+const AboutContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  @media only screen and (max-width: ${padWidth}) {
+  padding: 3% 0;
+  }
+  `; 
 
 
 function About() {
   return (
-    <Container
+    <AboutContainer
       id="about">
       <Typography
         style={{ textAlign: "center", marginTop: "7%", color: 'white',fontFamily:'BradleyHandITCTT-Bold'}}
@@ -36,7 +39,7 @@ function About() {
         The total supply of $TocaWorm Token is 1,000,000,000.
         TocaIsland covers 50,000 acres.
       </Typography>
-    </Container>
+    </AboutContainer>
   );
 }
 

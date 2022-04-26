@@ -6,7 +6,7 @@ const mediaStyle = `@media only screen and (max-width: ${padWidth}) {padding: 30
 function Container(props) {
   return (
     <div 
-    style={{mediaStyle,display:"flex",flexDirection:'column',maxWidth:'1200px',padding: '0 3%'}} 
+    style={{mediaStyle,display:"flex",flexDirection:'column',maxWidth:'1200px'}} 
     {...props}>
     </div>
   );

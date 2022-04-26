@@ -57,7 +57,7 @@ function BottomPart() {
         </a>
       </Tooltip>
       </div>
-      <Typography style={{color: 'white', fontSize:'12px',paddingTop:'32px'}}>© 2022 TOCAISLAND. ALL RIGHTS RESERVED</Typography>
+      <Typography style={{color: 'white', fontSize:'12px',paddingTop:'28px'}}>© 2022 TOCAISLAND. ALL RIGHTS RESERVED</Typography>
     </div>
   );
 }
