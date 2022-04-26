@@ -43,6 +43,14 @@ theme.typography.h4 = {
   },
 };
 
+theme.typography.faqtitle = {
+  fontSize: '2.0rem',
+  fontWeight: 'normal',
+  [`@media (max-width: ${padWidth})`]: {
+    fontSize: '1.3rem',
+  },
+};
+
 theme.typography.body1 = {
   fontSize: '1.4rem',
   [`@media (max-width: ${padWidth})`]: {

@@ -12,7 +12,7 @@ function getFAQItem(title, content) {
   return (
     <Accordion style={{ background: 'black', border: '1px solid white', borderRadius: '12px' }}>
       <AccordionSummary expandIcon={<ExpandMoreIcon style={{ color: 'white' }} />}>
-        <Typography variant="h4" style={{ color: 'white',fontSize:'30px'}}>{title}</Typography>
+        <Typography variant="faqtitle" style={{ color: 'white'}}>{title}</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Typography variant="body2" style={{ color: 'white' }}>
