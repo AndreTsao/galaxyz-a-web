@@ -251,12 +251,13 @@ function MintSection() {
     flex-direction: column;
     align-items: center;
     //border: 4px dashed #000;
-    padding: 70px 60px 35px;
+    padding: 4.35rem 3.75rem 3.12rem;
     margin-top: 8%;
     border-radius: 70px;
     background: #181E29;
     overflow: hidden;
     @media only screen and (max-width: ${padWidth}) {
+    padding: 3.35rem 2.75rem 2.12rem;
     width: 90%;
     margin-top: 0;
   }`;
