@@ -15,6 +15,7 @@ import {
   CONTRACT_STATUS
 } from "../widget/projectParam";
 import { padWidth } from "../widget/utils";
+import { style } from "@mui/system";
 
 
 
@@ -269,17 +270,50 @@ function MintSection() {
     font-size: 1rem;
    }`;
 
-  const GetMaxSpan = styled.div`
+  const GetMaxSpan = styled.span`
     cursor: pointer;
     text-align: center;
     padding: 9px;
     font-size: 1.3rem;
     color: #f0f0f0;
+    text-decoration: underline;
     :hover {
     font-weight: bold;
    }
    @media only screen and (max-width: ${padWidth}) {
     font-size: 0.8rem;
+   }
+   `;
+
+  const PlusImg = styled.img`
+  cursor: pointer;
+  width: 5.3rem;
+  height: 5.3rem;
+  padding: 0.5rem;
+  @media only screen and (max-width: ${padWidth}) {
+  width: 3.7rem;
+  height: 3.7rem;
+  padding: 0.4rem;
+  }
+  `;
+
+  const MintedNum = styled.div`
+  text-align: center;
+  font-size: 6.5rem;
+  color: white;
+  padding: 0 2.4rem;
+  @media only screen and (max-width: ${padWidth}) {
+  font-size: 4.2rem;
+  padding: 0 1.2rem;
+   }
+   `;
+
+  const MintedTipsDiv = styled.div`
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  @media only screen and (max-width: ${padWidth}) {
+  font-size: 0.7rem;
    }
    `;
 
@@ -296,12 +330,7 @@ function MintSection() {
         <GetMaxSpan style={{color:"transparent"}}>
           {"Get Max"}
         </GetMaxSpan>
-        <img
-          style={{
-            cursor: "pointer",
-            width: '60px',
-            height: '60px'
-          }}
+        <PlusImg
           src="/images/minus.png"
           onClick={() => {
             if (wantMintAmount <= 0) {
@@ -311,20 +340,11 @@ function MintSection() {
             setWantMintAmount(wantMintAmount - 1)
           }}
         />
-        <Typography
-          style={{ textAlign: "center", fontSize: '100px', padding: '0 38px', color: "#fff" }}
-          variant="h3"
-          component="div"
-        >
+        <MintedNum>
           {wantMintAmount}
-        </Typography>
+        </MintedNum>
 
-        <img
-          style={{
-            cursor: "pointer",
-            width: '60px',
-            height: '60px',
-          }}
+        <PlusImg
           src="/images/plus.png"
           onClick={() => {
             if (wantMintAmount >= CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted) {
@@ -343,11 +363,11 @@ function MintSection() {
       </div>
       {mintButton}
       {/* {CONTRACT_NFT_PER_PRICE} ETH each. */}
-      <div style={{ fontSize: '16px', textAlign: "center", color: "#fff" }}>
+      <MintedTipsDiv>
         <br />A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
         <br />1, Every TocaboNFT will get a piece of TocaIsland land for free!
         <br />2, Holder with more than 4 TocaboNFTs will be airdropped a TocaboTreeNFT
-      </div>
+      </MintedTipsDiv>
     </MintboxContainer >
   );
 }
