@@ -30,7 +30,7 @@ const MenuWrapper = styled.div`
 
 const MenuItemText = styled.span`
   cursor: pointer;
-  font-size:28px;
+  font-size: 1.75rem;
   text-align: center;
   padding: 0 26px;
   color: white;
@@ -40,7 +40,7 @@ const MenuItemText = styled.span`
     font-weight: bold;
   }
   @media only screen and (max-width: ${padWidth}) {
-    font-size: 20px;
+    font-size: 1.25rem;
     padding: 0 12px;
   }
 `;
@@ -80,13 +80,13 @@ function Intro() {
   return (
     <IntroContainer
       id="intro">
-        <div style={{color:"white",fontSize:'45px',display:'flex',alignItems:'center',
+        <div style={{color:"white",fontSize:'3rem',display:'flex',alignItems:'center',
         fontFamily:'BradleyHandITCTT-Bold',letterSpacing:'2px'}}>
           <img
             style={{
-              width: "39px",
-              height: "39px",
-              marginRight:'7px',
+              width: "2.2rem",
+              height: "2.2rem",
+              marginRight:'0.47rem',
             }}
             src="favicon.png"
           />TocaIsland</div>

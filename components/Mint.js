@@ -23,25 +23,18 @@ const ETHERSCAN_DOMAIN =
     ? "etherscan.io"
     : "rinkeby.etherscan.io";
 
-const GetMaxSpan = styled.div`
-  cursor: pointer;
-  :hover {
-    font-weight: bold;
-  }
-`;
-
 const StyledMintButton = styled.div`
   display: inline-block;
   text-align: center;
-  padding: 10px 15px;
-  border: 4px solid #000;
+  padding: 0.62rem 1rem;
+  border: 3px solid #000;
   font-family: 'BradleyHandITCTT-Bold';
   font-size: 1.8rem;
   border-radius: 35px;
   color: #000;
   background: #dde4b6;
   @media only screen and (max-width: ${padWidth}) {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   }
   cursor: ${(props) => {
     return props.minting || props.disabled ? "not-allowed" : "pointer";
@@ -263,25 +256,46 @@ function MintSection() {
     background: #181E29;
     overflow: hidden;
     @media only screen and (max-width: ${padWidth}) {
-    width: 92%;
+    width: 90%;
     margin-top: 0;
   }`;
 
+  const MintedDiv = styled.div`
+    display: flex;
+    align-items: center;
+    color: #EDCD58;
+    font-size: 1.38rem;
+    @media only screen and (max-width: ${padWidth}) {
+    font-size: 1rem;
+   }`;
+
+  const GetMaxSpan = styled.div`
+    cursor: pointer;
+    text-align: center;
+    padding: 9px;
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    :hover {
+    font-weight: bold;
+   }
+   @media only screen and (max-width: ${padWidth}) {
+    font-size: 0.8rem;
+   }
+   `;
+
   return (
     <MintboxContainer>
-      <div style={{ display: "flex", alignItems: "center", color: 'white', fontSize: '18px' }}>
+      <MintedDiv>
         {progress === null ? " ? " : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}
-      </div>
+      </MintedDiv>
       <div style={{
         display: "flex",
         alignItems: "center",
         marginBottom: '20px'
       }}>
-        <span
-          style={{ textAlign: "center", fontSize: '22px', padding: '11px', color: "transparent", fontFamily: 'BradleyHandITCTT-Bold' }}
-        >
+        <GetMaxSpan style={{color:"transparent"}}>
           {"Get Max"}
-        </span>
+        </GetMaxSpan>
         <img
           style={{
             cursor: "pointer",
@@ -321,12 +335,6 @@ function MintSection() {
           }}
         />
         <GetMaxSpan
-          style={{
-            fontSize: '22px',
-            padding: '11px',
-            fontFamily: 'BradleyHandITCTT-Bold',
-            color: '#F0F0F0'
-          }}
           onClick={() => {
             setWantMintAmount(CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted)
           }}>
@@ -334,8 +342,9 @@ function MintSection() {
         </GetMaxSpan>
       </div>
       {mintButton}
+      {/* {CONTRACT_NFT_PER_PRICE} ETH each. */}
       <div style={{ fontSize: '16px', textAlign: "center", color: "#fff" }}>
-        <br />{CONTRACT_NFT_PER_PRICE} ETH each. A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
+        <br />A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
         <br />1, Every TocaboNFT will get a piece of TocaIsland land for free!
         <br />2, Holder with more than 4 TocaboNFTs will be airdropped a TocaboTreeNFT
       </div>
