@@ -29,7 +29,7 @@ const theme = createTheme({
 });
 
 theme.typography.h3 = {
-  fontSize: '3rem',
+  fontSize: '3.2rem',
   fontWeight: 'normal',
   [`@media (max-width: ${padWidth})`]: {
     fontSize: '2rem',
@@ -44,22 +44,22 @@ theme.typography.h4 = {
 };
 
 theme.typography.faqtitle = {
-  fontSize: '2.0rem',
+  fontSize: '1.9rem',
   fontWeight: 'normal',
   [`@media (max-width: ${padWidth})`]: {
-    fontSize: '1.3rem',
+    fontSize: '1.1rem',
   },
 };
 
 theme.typography.body1 = {
-  fontSize: '1.4rem',
+  fontSize: '1.8rem',
   [`@media (max-width: ${padWidth})`]: {
-    fontSize: '1.2rem',
+    fontSize: '1.1rem',
   },
 };
 
 theme.typography.body2 = {
-  fontSize: '1.2rem',
+  fontSize: '1.3rem',
   [`@media (max-width: ${padWidth})`]: {
     fontSize: '1rem',
   },

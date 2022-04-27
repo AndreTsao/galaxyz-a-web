@@ -10,7 +10,7 @@ import { CONTRACT_NFT_PER_PRICE, CONTRACT_NFT_TOTAL_AMOUNT } from "../widget/pro
 
 function getFAQItem(title, content) {
   return (
-    <Accordion style={{ background: 'black', border: '1px solid white', borderRadius: '12px' }}>
+    <Accordion style={{ background: 'black', border: '1px solid white', borderRadius: '10px' }}>
       <AccordionSummary expandIcon={<ExpandMoreIcon style={{ color: 'white' }} />}>
         <Typography variant="faqtitle" style={{ color: 'white'}}>{title}</Typography>
       </AccordionSummary>
@@ -42,17 +42,17 @@ function FAQ() {
         variant="h3"
         gutterBottom
         component="div">
-        FAQs
+        F.A.Qs
       </Typography>
       {getFAQItem('Minting',
-        `1,The total supply of TocaboNFTs is ${CONTRACT_NFT_TOTAL_AMOUNT}. A maximum of 10 Tocabo NFTs can be minted per wallet. The minting price is ${CONTRACT_NFT_PER_PRICE} ETH. No pre-sale, only public sale. 
-      2, The total supply of TocaboTreeNFT is 5555. Holder with more than 4 TocaboNFTs will be airdropped a TocaboTreeNFT. `)}
+        `1,The total supply of TocaboNFTs is ${CONTRACT_NFT_TOTAL_AMOUNT}. A maximum of 10 Tocabo NFTs can be minted per wallet. No pre-sale, only public sale. 
+      2, The total supply of TocaboTreeNFT is 5666. The holder with more than 4 TocaboNFTs will be airdropped a TocaboTreeNFT. `)}
       {getFAQItem('What about the secondary market (like OpenSea) royalty fee?',
-        '1,70% of TocaIsland land will be AirDropped to the holder who stake Tocabos and TocaoWorms Token.2, The TocaIsland community congress will hold 22% of TocaIsland land.3, 8% of TocaIsland land will be AirDropped to TocaIsland team.')}
+        '1, 70% of TocaIsland land will be AirDropped to the holder who stake Tocabos and TocaoWorms Token. 2, The TocaIsland community congress will hold 22% of TocaIsland land.3, 8% of TocaIsland land will be AirDropped to TocaIsland team.')}
       {getFAQItem('Who is team behind TocaIsland?',
         'We are a creative and passionate team from all over the world.')}
       {getFAQItem('Contrtact Adress',
-        'TocaboNFTs:xxxxxxxxx  TocaboTreeNFTs: Coming soon...  TocaboTreeNFTs: Coming soon...  $TocaWorm: Coming soon... TocaIsland Metaverse: Coming soon...')}
+        'TocaboNFT:Coming soon...  TocaboTreeNFT: Coming soon...  $TocaWorm Token: Coming soon... TocaIsland Metaverse: Coming soon...')}
       {getFAQItem('What about the secondary market (like OpenSea) royalty fee?',
         '7% (note that the majority of royalties will be used for the prizepool of TocaIsland).')}
     </FAQContainer>

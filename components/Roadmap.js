@@ -12,21 +12,39 @@ const Content = styled.div`
   }
 `;
 
+const RoadmapItemDiv = styled.div`
+  padding-left: 5.2rem;
+  padding-bottom: 2.8rem;
+  @media only screen and (max-width: ${padWidth}) {
+  padding-left: 1.6rem;
+  padding-bottom: 2rem;
+  }
+`;
+
+const RoadmapItemImg = styled.img`
+  height: 3.13rem;
+  width: 3.13rem;
+  @media only screen and (max-width: ${padWidth}) {
+  height: 2.2rem;
+  width: 2.2rem;
+  }
+`;
+
 function getRoadmapItem(isFinish, picture, title, content) {
   return (
-    <div style={{ display: "flex", flexDirection: 'row' }}>
+    <div style={{ display: "flex", flexDirection: 'row'}}>
       <div style={{ display: 'flex', flexDirection: "column", alignItems: 'center' }}>
-        <img style={{ height: '50px', width: '50px' }} src={`/icons/${picture}.png`} />
+        <RoadmapItemImg src={`/icons/${picture}.png`} />
         <div style={{ background: 'white', width: '1px', flex: 1 }} />
       </div>
-      <div style={{ paddingLeft: '84px', paddingBottom: '45px' }}>
+      <RoadmapItemDiv>
         <Typography variant="h4" style={{ color: 'green', paddingBottom: '15px', fontFamily: 'BradleyHandITCTT-Bold' }}>{title}</Typography>
         <Typography
           style={{ color: 'white' }}
           variant="body1">
           {isFinish ? (<del>{content}</del>) : content}
         </Typography>
-      </div>
+      </RoadmapItemDiv>
     </div>)
 }
 
