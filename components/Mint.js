@@ -12,7 +12,8 @@ import {
   CONTRACT_PERWALLET_MAX_MINT_AMOUNT,
   CONTRACT_NFT_TOTAL_AMOUNT,
   CONTRACT_NFT_PER_PRICE,
-  CONTRACT_STATUS
+  CONTRACT_STATUS,
+  FREE_MINT_AMOUNT
 } from "../widget/projectParam";
 import { padWidth } from "../widget/utils";
 import { style } from "@mui/system";
@@ -60,9 +61,15 @@ function MintButton(props) {
         try {
           const { signer, contract } = await connectWallet();
           const contractWithSigner = contract.connect(signer);
-          const value = ethers.utils.parseEther(/////
+          const progress = parseInt(await contract.totalSupply());//minted 
+          let value = ethers.utils.parseEther(/////
             new BigNumber(props.wantMintAmount).multipliedBy(new BigNumber(CONTRACT_NFT_PER_PRICE)).toString()
           );
+          console.log('FREE_MINT-1',progress,parseInt(FREE_MINT_AMOUNT),value.toString())
+          if (progress < parseInt(FREE_MINT_AMOUNT)) {//freemint
+            value = ethers.utils.parseEther('0');
+            console.log('FREE_MINT-2',value.toString())
+          }
           //call contract to mint
           const tx = await contractWithSigner.mint(props.wantMintAmount, {
             value,
@@ -106,7 +113,7 @@ function MintButton(props) {
         ...props.style,
       }}
     >
-      mint{props.wantMintAmount}{minting ? "ing..." : ""}
+      {" "}mint{minting ? "ing... " : " "}
     </StyledMintButton>
   );
 }
@@ -329,7 +336,7 @@ function MintSection() {
         alignItems: "center",
         marginBottom: '20px'
       }}>
-        <GetMaxSpan style={{color:"transparent"}}>
+        <GetMaxSpan style={{ color: "transparent" }}>
           {"Get Max"}
         </GetMaxSpan>
         <PlusImg
