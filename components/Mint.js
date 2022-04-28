@@ -106,7 +106,7 @@ function MintButton(props) {
         ...props.style,
       }}
     >
-      mint{props.wantMintAmount} 个{minting ? "ing..." : ""}
+      mint{props.wantMintAmount}{minting ? "ing..." : ""}
     </StyledMintButton>
   );
 }
@@ -241,7 +241,8 @@ function MintSection() {
           cursor: "not-allowed",
         }}
       >
-        Connect Wallet
+        {/* Connect Wallet */}
+        Not yet started
       </StyledMintButton>
     );
   }
