@@ -21,16 +21,12 @@ export default function Home() {
     <div style={{ display: "flex",width: '100%', flexDirection: "column", alignItems: "center", paddingBottom: '40px' }}>
       <Head>
         <title>TocaIsland - Enter metaverse </title>
-        <meta name="description" content="TocaIsland is an Multi-Blockchain Metaverse island. The ecosystem in TocaIsland
-         is mainly composed of TocaboNFT(Bigmouth bird)🐧, TocaTreeNFT🌴 and $TocaWorm Token🪱.
-        A Tocabo will get a piece of TocaIsland land for free in Q4 2022! The stronger a Tocabo,the more territory it has in TocaIsland.
-        TocaTree produces $TocaWorm Token.The more $TocaWorm a Tocabo eats, the stronger it will become.
-        TocaboNFT is an exclusive NFT collection of 5666 toucans NFT and it is the PASSCARD into TocaIsland.
-        TocaTreeNFT is an exclusive NFT collection of 5666 many kinds of trees NFT.
-        The total supply of $TocaWorm Token is 1,000,000,000.
-        TocaIsland covers 50,000 acres." />
+        <meta name="description" content="TocaIsland is a Multi-Blockchain Metaverse island. The ecosystem in TocaIsland
+         is mainly composed of TocaboNFT(Bigmouth bird), TocaTreeNFT and $TocaWorm Token.A Tocabo will get a piece of TocaIsland land for free in Q4 2022! 
+         The stronger a Tocabo,the more territory it has in TocaIsland.TocaTree produces $TocaWorm Token.The more $TocaWorm a Tocabo eats, the stronger it will become." />
+        <meta name="keywords" content="TocaIsland,Tocabo,TocaTree,TocaWorm,NFT,Metaverse"/>
+        <meta name="author" content="TocaIsland"/>
         <link rel="icon" href="/favicon.png" />
-
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         <script
           async

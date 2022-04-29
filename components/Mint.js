@@ -234,7 +234,7 @@ function MintSection() {
           cursor: "not-allowed",
         }}
       >
-        You have reached the maximum mint number
+        The maximum mint number is 10
       </StyledMintButton>
     );
   }
