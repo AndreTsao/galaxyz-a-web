@@ -30,7 +30,7 @@ function About() {
         style={{ marginBottom: '20px', color: 'white' }}
         variant="body1"
         gutterBottom>
-        TocaIsland is an Multi-Blockchain Metaverse island. The ecosystem in TocaIsland is mainly composed of 
+        TocaIsland is a Multi-Blockchain Metaverse island. The ecosystem in TocaIsland is mainly composed of 
         TocaboNFT(Bigmouth bird)🐧, TocaTreeNFT🌴 and $TocaWorm Token🪱. A Tocabo will get a piece of TocaIsland land for free in Q4 2022! 
         <br/>The stronger a Tocabo,the more territory it has in TocaIsland. TocaTree produces $TocaWorm Token.The more $TocaWorm a Tocabo eats, the stronger it will become.
         TocaboNFT is an exclusive NFT collection of 5666 toucans NFT and it is the PASSCARD into TocaIsland.
