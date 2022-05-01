@@ -373,7 +373,7 @@ function MintSection() {
       {mintButton}
       {/* {CONTRACT_NFT_PER_PRICE} ETH each. */}
       <MintedTipsDiv>
-        <br />A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} Tocabo NFTs can be minted per wallet.
+        <br />A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} TocaboNFT can be minted per wallet.
         <br />1, Every TocaboNFT will get a piece of TocaIsland land for free!
         <br />2, Holder with more than 4 TocaboNFTs will be airdropped a TocaboTreeNFT
       </MintedTipsDiv>
