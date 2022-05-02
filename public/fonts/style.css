@@ -2,3 +2,7 @@
     font-family: 'BradleyHandITCTT-Bold';
     src: url("../static/bradley_hand_itc_tt_bold.ttf"); 
 }
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../static/Montserrat-VariableFont_wght.ttf");
+  }

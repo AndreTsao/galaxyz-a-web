@@ -123,7 +123,7 @@ function MintSection() {
   const [progress, setProgress] = useState(null);//已经mint的数量
   const [fullAddress, setFullAddress] = useState(null);
   const [numberMinted, setNumberMinted] = useState(0);//某地址已经minted的数量
-  const [wantMintAmount, setWantMintAmount] = useState(0);//点击选择mint的数量
+  const [wantMintAmount, setWantMintAmount] = useState(10);//点击选择mint的数量
 
   async function updateStatus() {//更新status和已经mint的数量  这是mint逻辑的第一个控制条件
     const { contract } = await connectWallet();
@@ -271,6 +271,8 @@ function MintSection() {
   }`;
 
   const MintedDiv = styled.div`
+    font-family: Montserrat;
+    font-weight: 500;
     display: flex;
     align-items: center;
     color: #EDCD58;
@@ -307,13 +309,15 @@ function MintSection() {
   `;
 
   const MintedNum = styled.div`
+  font-family: Montserrat;
+  font-weight: 600;
   text-align: center;
   font-size: 6.5rem;
+  min-width: 11rem;
   color: white;
-  padding: 0 2.4rem;
   @media only screen and (max-width: ${padWidth}) {
   font-size: 4.2rem;
-  padding: 0 1.2rem;
+  min-width: 7.2rem;
    }
    `;
 

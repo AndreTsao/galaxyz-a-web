@@ -24,8 +24,7 @@ export default function Home() {
         <title>TocaIsland - Enter metaverse </title>
         <meta charset="utf-8" />
         <meta name="description" content="TocaIsland is a Multi-Blockchain Metaverse island. The ecosystem in TocaIsland
-         is mainly composed of TocaboNFT(Bigmouth bird), TocaTreeNFT and $TocaWorm Token.A Tocabo will get a piece of TocaIsland land for free in Q4 2022! 
-         The stronger a Tocabo,the more territory it has in TocaIsland.TocaTree produces $TocaWorm Token.The more $TocaWorm a Tocabo eats, the stronger it will become." />
+         is mainly composed of TocaboNFT(Bigmouth bird), TocaTreeNFT and $TocaWorm Token." />
         <meta name="keywords" content="TocaIsland,Tocabo,TocaTree,TocaWorm,NFT,Metaverse" />
         <meta name="author" content="TocaIsland" />
         <link rel="icon" href="/favicon.png" />
