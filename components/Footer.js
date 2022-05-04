@@ -74,9 +74,6 @@ function BottomPart() {
           target="_blank"
           rel="noreferrer">
           <SocialMediaImg
-            style={{
-              width: '44px',
-            }}
             src="/icons/discord.png"/>
         </a>
       </Tooltip>
