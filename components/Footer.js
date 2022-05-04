@@ -56,31 +56,30 @@ function BottomPart() {
           />
         </a>
       </Tooltip>
-      <Tooltip title="OpenSea">
+      {/* <Tooltip title="OpenSea">
         <a
           href= {SOCIAL_MEDIA_URL.OPENSEA}
           target="_blank"
           rel="noreferrer">
           <SocialMediaImg
-            // style={{
-            //   marginRight: "40px",
-            // }}
+            style={{
+              marginRight: "40px",
+            }}
             src="/icons/opensea.png"/>
         </a>
-      </Tooltip>
-      {/* <Tooltip title="LooksRare">
+      </Tooltip> */}
+      <Tooltip title="Discord">
         <a
           href= {SOCIAL_MEDIA_URL.DISCORD}
           target="_blank"
           rel="noreferrer">
-          <img
+          <SocialMediaImg
             style={{
-              cursor: "pointer",
               width: '44px',
             }}
             src="/icons/discord.png"/>
         </a>
-      </Tooltip> */}
+      </Tooltip>
       </div>
       <FootertipsDiv>© 2022 TOCAISLAND. ALL RIGHTS RESERVED</FootertipsDiv>
     </FooterContainersDiv>

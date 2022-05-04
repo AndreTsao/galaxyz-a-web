@@ -11,7 +11,7 @@ const CONTRACT_STATUS = {
 }
 const SOCIAL_MEDIA_URL = {
   'OPENSEA': 'https://opensea.io/',
-  'DISCORD': 'https://https://discord.com/',
+  'DISCORD': 'https://discord.gg/SxnCQFj7',
   'TWITTER': 'https://twitter.com/TocaIsland',
 }
 
