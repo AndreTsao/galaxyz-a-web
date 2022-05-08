@@ -271,8 +271,7 @@ function MintSection() {
   }`;
 
   const MintedDiv = styled.div`
-    font-family: Montserrat;
-    font-weight: 500;
+    font-family: Montserrat-Italic;
     display: flex;
     align-items: center;
     color: #EDCD58;
@@ -282,6 +281,7 @@ function MintSection() {
    }`;
 
   const GetMaxSpan = styled.span`
+    font-family: Montserrat-Italic;
     cursor: pointer;
     text-align: center;
     padding: 9px;
@@ -289,7 +289,7 @@ function MintSection() {
     color: #f0f0f0;
     text-decoration: underline;
     :hover {
-    font-weight: bold;
+    font-family: Montserrat-BoldItalic;
    }
    @media only screen and (max-width: ${padWidth}) {
     font-size: 0.8rem;
@@ -301,16 +301,24 @@ function MintSection() {
   width: 5.3rem;
   height: 5.3rem;
   padding: 0.5rem;
+  will-change: transform;
+  transition: all 0.2s ease;
+  :hover {
+    transform: scale(1.15);
+  }
   @media only screen and (max-width: ${padWidth}) {
   width: 3.7rem;
   height: 3.7rem;
   padding: 0.4rem;
+  :hover {
+    transform: scale(1);
+  }
   }
   `;
 
   const MintedNum = styled.div`
   font-family: Montserrat;
-  font-weight: 600;
+  font-weight: 1000;
   text-align: center;
   font-size: 6.5rem;
   min-width: 11rem;
