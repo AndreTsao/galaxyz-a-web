@@ -29,6 +29,7 @@ const theme = createTheme({
 });
 
 theme.typography.h3 = {
+  fontFamily:'Montserrat',
   fontSize: '3.2rem',
   fontWeight: 'normal',
   [`@media (max-width: ${padWidth})`]: {
@@ -36,6 +37,7 @@ theme.typography.h3 = {
   },
 };
 theme.typography.h4 = {
+  fontFamily:'Montserrat',
   fontSize: '2.4rem',
   fontWeight: 'normal',
   [`@media (max-width: ${padWidth})`]: {
@@ -44,6 +46,7 @@ theme.typography.h4 = {
 };
 
 theme.typography.faqtitle = {
+  fontFamily:'Montserrat',
   fontSize: '1.9rem',
   fontWeight: 'normal',
   [`@media (max-width: ${padWidth})`]: {
@@ -52,6 +55,7 @@ theme.typography.faqtitle = {
 };
 
 theme.typography.body1 = {
+  fontFamily:'Montserrat',
   fontSize: '1.8rem',
   [`@media (max-width: ${padWidth})`]: {
     fontSize: '1.1rem',
@@ -59,6 +63,7 @@ theme.typography.body1 = {
 };
 
 theme.typography.body2 = {
+  fontFamily:'Montserrat',
   fontSize: '1.3rem',
   [`@media (max-width: ${padWidth})`]: {
     fontSize: '1rem',
