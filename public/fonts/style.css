@@ -4,5 +4,13 @@
 }
 @font-face {
     font-family: 'Montserrat';
-    src: url("../static/Montserrat-VariableFont_wght.ttf");
+    src: url("../static/Montserrat-Regular.ttf");
   }
+@font-face {
+    font-family: 'Montserrat-BoldItalic';
+    src: url("../static/Montserrat-BoldItalic.ttf");
+  } 
+@font-face {
+    font-family: 'Montserrat-Italic';
+    src: url("../static/Montserrat-Italic.ttf");
+}  

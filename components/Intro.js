@@ -36,9 +36,6 @@ const MenuItemText = styled.span`
   color: white;
   font-family: BradleyHandITCTT-Bold;
   flex-wrap: wrap;
-  :hover {
-    font-weight: bold;
-  }
   @media only screen and (max-width: ${padWidth}) {
     font-size: 1.25rem;
     padding: 0 12px;
