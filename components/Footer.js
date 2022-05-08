@@ -30,6 +30,7 @@ const SocialMediaImg = styled.img`
 }
 `;
 const FooterContainersDiv = styled.div`
+  font-family: Montserrat;
   display: flex;
   flex-direction: column;
   align-items: center;

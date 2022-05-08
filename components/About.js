@@ -27,7 +27,7 @@ function About() {
         ABOUT
       </Typography>
       <Typography
-        style={{ marginBottom: '20px', color: 'white' }}
+        style={{marginBottom: '20px', color: 'white' }}
         variant="body1"
         gutterBottom>
         TocaIsland is a Multi-Blockchain Metaverse island. The ecosystem in TocaIsland is mainly composed of 

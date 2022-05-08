@@ -330,6 +330,7 @@ function MintSection() {
    `;
 
   const MintedTipsDiv = styled.div`
+  font-family: Montserrat;
   text-align: center;
   font-size: 1rem;
   color: white;
