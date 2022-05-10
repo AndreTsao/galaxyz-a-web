@@ -1,16 +1,8 @@
 import styled from "styled-components";
-import Container from "./Container";
-import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
 import { SOCIAL_MEDIA_URL } from "../widget/projectParam";
 import { padWidth } from "../widget/utils";
 
-const Content = styled.div`
-  max-width: 840px;
-  margin: 10px auto 20px auto;
-  display: flex;
-  align-items: center;
-`;
 
 const FootertipsDiv = styled.div`
   font-size:0.75rem;

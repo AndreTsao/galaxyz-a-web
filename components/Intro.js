@@ -1,11 +1,9 @@
 import styled from "styled-components";
 import Tooltip from "@mui/material/Tooltip";
 
-import Container from "./Container";
 import ConnectWallet from "./ConnectWallet";
 import { padWidth } from "../widget/utils";
 import { CONTRACT_NFT_OFFICIAL_NAME, SOCIAL_MEDIA_URL } from "../widget/projectParam";
-import { blue } from "@mui/material/colors";
 
 const Head = styled.div`
   display: flex;
@@ -42,6 +40,29 @@ const MenuItemText = styled.span`
   }
 `;
 
+const SocialMediaImg = styled.img`
+  cursor: "pointer";
+  width: 1.8rem;
+  @media only screen and (max-width: ${padWidth}) {
+  width: 1.6rem;
+  display: none;
+}
+`;
+
+const IntroContainer = styled.div`
+  display: flex;
+  align-items:center;
+  width: 90%;
+  padding:12px 10px;
+  max-width: 1400px;
+  justify-content: space-between;
+  overflow: hidden;
+  @media only screen and (max-width: ${padWidth}) {
+  padding: 10px 0 16px;
+  flex-direction: column;
+  }
+  `;
+
 function MenuItem(props) {
   const elementId = props.elementId;
   return (
@@ -58,20 +79,6 @@ function MenuItem(props) {
     </MenuItemText>
   );
 }
-
-const IntroContainer = styled.div`
-  display: flex;
-  align-items:center;
-  width: 90%;
-  padding:12px 10px;
-  max-width: 1400px;
-  justify-content: space-between;
-  overflow: hidden;
-  @media only screen and (max-width: ${padWidth}) {
-  padding: 10px 0 16px;
-  flex-direction: column;
-  }
-  `;
 
 function Intro() {
   return (
@@ -93,7 +100,32 @@ function Intro() {
           <MenuItem elementId="roadmap">Roadmap</MenuItem>
           <MenuItem elementId="faq">F.A.Q</MenuItem>
         </MenuWrapper>
-        <ConnectWallet showCollect={true} />
+       <div style={{display: 'flex', alignItems:'center'}}>
+       <ConnectWallet showCollect={true} />
+        <Tooltip title="Twitter">
+        <a
+          href= {SOCIAL_MEDIA_URL.TWITTER}
+          target="_blank"
+          rel="noreferrer">
+          <SocialMediaImg
+            style={{
+              marginLeft:'1.8rem',
+              marginRight: "1rem"
+            }}
+            src="/icons/twitter.png"
+          />
+        </a>
+      </Tooltip>
+      <Tooltip title="Discord">
+        <a
+          href= {SOCIAL_MEDIA_URL.DISCORD}
+          target="_blank"
+          rel="noreferrer">
+          <SocialMediaImg
+            src="/icons/discord.png"/>
+        </a>
+      </Tooltip>
+       </div>
     </IntroContainer>
   );
 }
