@@ -7,8 +7,12 @@
     src: url("../static/Montserrat-Regular.ttf");
   }
 @font-face {
-    font-family: 'Montserrat-BoldItalic';
-    src: url("../static/Montserrat-BoldItalic.ttf");
+    font-family: 'Montserrat-SemiBold';
+    src: url("../static/Montserrat-SemiBold.ttf");
+  }
+@font-face {
+    font-family: 'Montserrat-SemiBoldItalic';
+    src: url("../static/Montserrat-SemiBoldItalic.ttf");
   } 
 @font-face {
     font-family: 'Montserrat-Italic';

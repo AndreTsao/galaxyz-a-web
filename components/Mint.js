@@ -288,9 +288,10 @@ function MintSection() {
     font-size: 1.3rem;
     color: #f0f0f0;
     text-decoration: underline;
-    :hover {
-    font-family: Montserrat-BoldItalic;
-   }
+    font-family: Montserrat-SemiBoldItalic;
+    /* :hover {
+    font-family: Montserrat-SemiBoldItalic;
+   } */
    @media only screen and (max-width: ${padWidth}) {
     font-size: 0.8rem;
    }
