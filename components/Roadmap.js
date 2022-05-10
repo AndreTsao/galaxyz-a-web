@@ -73,7 +73,7 @@ function Roadmap() {
       {getRoadmapItem(true, 'roadmap1', 'Q1 2022 Team Recruitment', '1, Recruit creative and passionate team members; 2, Research NFT Market; 3, Project approval')}
       {getRoadmapItem(false, 'roadmap2', 'Q2 2022 TocaboNFT TocaTreeNFT $TocaoWorms', '1, TocaboNFT Minting; 2, Airdrop TocaTreeNFT to the TocaboNFT holder; 3, Stake TocaTreeNFT to produce $TocaoWorms Token')}
       {getRoadmapItem(false, 'roadmap3', 'Q3 2022 TocaIsland Distribution', '1, Stake TocaboNFT and burn $TocaoWorms Token to increase the weight attribute of Tobabo; 2, Heavier Tocabo gains more territory in TocaIsland')}
-      {getRoadmapItem(false, 'roadmap4', 'Q4 2022 Omnichain TocaIsland', '1, Binance Smart Chain,Polygon,Avalanche,Fantom; 2, Arbitrum,Solana...')}
+      {getRoadmapItem(false, 'roadmap4', 'Q4 2022 Omnichain TocaIsland', '1, Binance Smart Chain, Polygon, Avalanche, Fantom; 2, Arbitrum, Solana...')}
     </RoadmapContainer>
   );
 }
