@@ -29,8 +29,9 @@ const StyledMintButton = styled.div`
   display: inline-block;
   text-align: center;
   padding: 0.62rem 1rem;
+  min-width: 10rem;
   border: 3px solid #000;
-  font-family: 'BradleyHandITCTT-Bold';
+  font-family: 'Montserrat-SemiBoldItalic';
   font-size: 1.8rem;
   border-radius: 35px;
   color: #000;
@@ -65,16 +66,18 @@ function MintButton(props) {
           let value = ethers.utils.parseEther(/////
             new BigNumber(props.wantMintAmount).multipliedBy(new BigNumber(CONTRACT_NFT_PER_PRICE)).toString()
           );
-          console.log('FREE_MINT-1',progress,parseInt(FREE_MINT_AMOUNT),value.toString())
-          if (progress < parseInt(FREE_MINT_AMOUNT)) {//freemint
+          console.log('FREE_MINT-1',props.wantMintAmount+progress)
+          if ((props.wantMintAmount+progress) <= parseInt(FREE_MINT_AMOUNT)) {//freemint
             value = ethers.utils.parseEther('0');
             console.log('FREE_MINT-2',value.toString())
           }
+          console.log('FREE_MINT-3',props.wantMintAmount,value.toString())
           //call contract to mint
           const tx = await contractWithSigner.mint(props.wantMintAmount, {
             value,
           });
           const response = await tx.wait();
+          console.log('FREE_MINT-4',response)
           showMessage({
             type: "success",
             title: "NFTs were minted successfully",
@@ -234,7 +237,7 @@ function MintSection() {
           cursor: "not-allowed",
         }}
       >
-        The maximum mint number is 10
+        The maximum is 10
       </StyledMintButton>
     );
   }
@@ -356,8 +359,8 @@ function MintSection() {
         <PlusImg
           src="/images/minus.png"
           onClick={() => {
-            if (wantMintAmount <= 0) {
-              setWantMintAmount(0)
+            if (wantMintAmount <= 1) {
+              setWantMintAmount(1)
               return;
             }
             setWantMintAmount(wantMintAmount - 1)
@@ -389,7 +392,7 @@ function MintSection() {
       <MintedTipsDiv>
         <br />A maximum of {CONTRACT_PERWALLET_MAX_MINT_AMOUNT} TocaboNFT can be minted per wallet.
         <br />1, Every TocaboNFT will get a piece of TocaIsland land for free!
-        <br />2, Holder with more than 4 TocaboNFTs will be airdropped a TocaboTreeNFT
+        <br />2, Holder with more than 7 TocaboNFTs will be airdropped a TocaboTreeNFT
       </MintedTipsDiv>
     </MintboxContainer >
   );
@@ -398,7 +401,7 @@ function MintSection() {
 const MintContainer = styled.div`
     display: flex;
     width: 100%;
-    height: 920px;
+    height: 880px;
     background-image: url(/images/home_background.png);
     background-size:cover;
     background-repeat: no-repeat;
