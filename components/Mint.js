@@ -52,8 +52,7 @@ function MintButton(props) {
 
   return (
     <StyledMintButton
-      // disabled={!!props.disabled}
-      disabled={true}
+      disabled={!!props.disabled}
       minting={minting}
       onClick={async () => {
         if (minting || props.disabled) {
@@ -252,8 +251,7 @@ function MintSection() {
           cursor: "not-allowed",
         }}
       >
-        {/* Connect Wallet */}
-        Not yet started
+        Connect Wallet
       </StyledMintButton>
     );
   }
