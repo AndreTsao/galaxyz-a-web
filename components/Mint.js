@@ -52,7 +52,8 @@ function MintButton(props) {
 
   return (
     <StyledMintButton
-      disabled={!!props.disabled}
+      // disabled={!!props.disabled}
+      disabled={true}
       minting={minting}
       onClick={async () => {
         if (minting || props.disabled) {
