@@ -251,7 +251,7 @@ function MintSection() {
           cursor: "not-allowed",
         }}
       >
-        Connect Wallet
+        Mint
       </StyledMintButton>
     );
   }
