@@ -345,8 +345,7 @@ function MintSection() {
   return (
     <MintboxContainer>
       <MintedDiv>
-        {/* {progress === null ? " ? " : progress} / {CONTRACT_NFT_TOTAL_AMOUNT} */}
-        ?  / {CONTRACT_NFT_TOTAL_AMOUNT}
+        {progress === null ? " ? " : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}
       </MintedDiv>
       <div style={{
         display: "flex",
