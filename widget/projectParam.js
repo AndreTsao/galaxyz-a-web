@@ -10,7 +10,7 @@ const CONTRACT_STATUS = {
   'SOLD_OUT': '2',
 }
 const SOCIAL_MEDIA_URL = {
-  'OPENSEA': 'https://opensea.io/',
+  'OPENSEA': 'https://opensea.io/collection/tocabo',
   'DISCORD': 'https://discord.gg/SxnCQFj7',
   'TWITTER': 'https://twitter.com/TocaIsland',
 }
