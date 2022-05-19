@@ -52,8 +52,7 @@ function MintButton(props) {
 
   return (
     <StyledMintButton
-      // disabled={!!props.disabled}
-      disabled={true}
+      disabled={!!props.disabled}
       minting={minting}
       onClick={async () => {
         if (minting || props.disabled) {
@@ -252,8 +251,7 @@ function MintSection() {
           cursor: "not-allowed",
         }}
       >
-        {/* Connect Wallet */}
-        Not yet started
+        Connect Wallet
       </StyledMintButton>
     );
   }
@@ -347,7 +345,8 @@ function MintSection() {
   return (
     <MintboxContainer>
       <MintedDiv>
-        {progress === null ? " ? " : progress} / {CONTRACT_NFT_TOTAL_AMOUNT}
+        {/* {progress === null ? " ? " : progress} / {CONTRACT_NFT_TOTAL_AMOUNT} */}
+        ?  / {CONTRACT_NFT_TOTAL_AMOUNT}
       </MintedDiv>
       <div style={{
         display: "flex",
