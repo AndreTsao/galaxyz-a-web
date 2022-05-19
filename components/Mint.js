@@ -389,7 +389,7 @@ function MintSection() {
       {mintButton}
       {/* {CONTRACT_NFT_PER_PRICE} ETH each. */}
       <MintedTipsDiv>
-        <br />0.005 ETH each. Azuki ERC721A to save Gas Fee.
+        <br />0.005 ETH each.The Azuki ERC721A contract to save Gas Fee.
         <br />1, Every TocaboNFT will get a piece of TocaIsland land for free!
         <br />2, Holder with more than 7 TocaboNFTs will be airdropped a TocaboTreeNFT
       </MintedTipsDiv>
