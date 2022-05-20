@@ -49,18 +49,6 @@ function BottomPart() {
           />
         </a>
       </Tooltip>
-      {/* <Tooltip title="OpenSea">
-        <a
-          href= {SOCIAL_MEDIA_URL.OPENSEA}
-          target="_blank"
-          rel="noreferrer">
-          <SocialMediaImg
-            style={{
-              marginRight: "40px",
-            }}
-            src="/icons/opensea.png"/>
-        </a>
-      </Tooltip> */}
       <Tooltip title="Discord">
         <a
           href= {SOCIAL_MEDIA_URL.DISCORD}
@@ -68,6 +56,18 @@ function BottomPart() {
           rel="noreferrer">
           <SocialMediaImg
             src="/icons/discord.png"/>
+        </a>
+      </Tooltip>
+      <Tooltip title="OpenSea">
+        <a
+          href= {SOCIAL_MEDIA_URL.OPENSEA}
+          target="_blank"
+          rel="noreferrer">
+          <SocialMediaImg
+            style={{
+              marginLeft: "40px",
+            }}
+            src="/icons/opensea.png"/>
         </a>
       </Tooltip>
       </div>

@@ -122,7 +122,19 @@ function Intro() {
           target="_blank"
           rel="noreferrer">
           <SocialMediaImg
+          style={{
+            marginRight: "1rem"
+          }}
             src="/icons/discord.png"/>
+        </a>
+      </Tooltip>
+      <Tooltip title="Discord">
+        <a
+          href= {SOCIAL_MEDIA_URL.OPENSEA}
+          target="_blank"
+          rel="noreferrer">
+          <SocialMediaImg
+            src="/icons/opensea.png"/>
         </a>
       </Tooltip>
        </div>
