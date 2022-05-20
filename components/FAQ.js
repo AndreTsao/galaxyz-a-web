@@ -45,16 +45,16 @@ function FAQ() {
         F.A.Qs
       </Typography>
       {getFAQItem('Minting',
-        `1,The total supply of TocaboNFTs is ${CONTRACT_NFT_TOTAL_AMOUNT}. A maximum of 10 TocaboNFT can be minted per wallet. No pre-sale, only public sale. 
+        `1, The total supply of TocaboNFTs is ${CONTRACT_NFT_TOTAL_AMOUNT}. A maximum of 10 TocaboNFT can be minted per wallet. No pre-sale, only public sale. 
       2, The total supply of TocaboTreeNFT is 5666. The holder with more than 4 TocaboNFT will be airdropped a TocaboTreeNFT. `)}
       {getFAQItem('What about the secondary market (like OpenSea) royalty fee?',
-        '1, 70% of TocaIsland land will be AirDropped to the holder who stake Tocabos and TocaoWorms Token. 2, The TocaIsland community congress will hold 22% of TocaIsland land.3, 8% of TocaIsland land will be AirDropped to TocaIsland team.')}
+        '1, 70% of TocaIsland land will be AirDropped to the holder who stake Tocabos and TocaoWorms Token. 2, The TocaIsland community congress will hold 22% of TocaIsland land. 3, 8% of TocaIsland land will be AirDropped to TocaIsland team.')}
       {getFAQItem('Who is team behind TocaIsland?',
         'We are a creative and passionate team from all over the world.')}
       {getFAQItem('Contrtact Adress',
-        'TocaboNFT:Coming soon...  TocaboTreeNFT: Coming soon...  $TocaWorm Token: Coming soon... TocaIsland Metaverse: Coming soon...')}
+        'TocaboNFT: 0x676676Cdd8BB03648Bb15D5E801C1F28B9E5a19f  TocaboTreeNFT: Coming soon...  $TocaWorm Token: Coming soon... TocaIsland Metaverse: Coming soon...')}
       {getFAQItem('What about the secondary market (like OpenSea) royalty fee?',
-        '7% (note that the majority of royalties will be used for the prizepool of TocaIsland).')}
+        '7% (note that the majority of royalties will be used for the prizepool of TocaIsland.')}
     </FAQContainer>
   );
 }
