@@ -42,9 +42,9 @@ const MenuItemText = styled.span`
 
 const SocialMediaImg = styled.img`
   cursor: "pointer";
-  width: 1.8rem;
+  width: 1.5rem;
   @media only screen and (max-width: ${padWidth}) {
-  width: 1.6rem;
+  width: 1.3rem;
   display: none;
 }
 `;
@@ -53,7 +53,7 @@ const IntroContainer = styled.div`
   display: flex;
   align-items:center;
   width: 90%;
-  padding:12px 10px;
+  padding:12px 0;
   max-width: 1400px;
   justify-content: space-between;
   overflow: hidden;
@@ -110,7 +110,7 @@ function Intro() {
           <SocialMediaImg
             style={{
               marginLeft:'1.8rem',
-              marginRight: "1rem"
+              marginRight: "0.8rem"
             }}
             src="/icons/twitter.png"
           />
@@ -123,7 +123,7 @@ function Intro() {
           rel="noreferrer">
           <SocialMediaImg
           style={{
-            marginRight: "1rem"
+            marginRight: "0.8rem"
           }}
             src="/icons/discord.png"/>
         </a>
