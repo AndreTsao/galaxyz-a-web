@@ -36,8 +36,5 @@ yarn-error.log*
 
 /.idea
 
-# Sentry
-.sentryclirc
-
 #vscode
 .vscode

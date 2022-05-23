@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Head from "next/head";
+import initSentry from "../widget/sentryInite"
 import Intro from "../components/Intro";
 import FAQ from "../components/FAQ";
 import Mint from "../components/Mint";
