@@ -101,6 +101,7 @@ function MintButton(props) {
               </div>
             ),
           });
+          gtag('event', 'click_mint', {'click_mint': 'click_mint','address':address});
         } catch (err) {
           showMessage({
             type: "error",
@@ -363,6 +364,7 @@ function MintSection() {
               return;
             }
             setWantMintAmount(wantMintAmount - 1)
+            gtag('event', 'click_plus', {'click_plus': 'click_plus'});
           }}
         />
         <MintedNum>
@@ -382,6 +384,7 @@ function MintSection() {
         <GetMaxSpan
           onClick={() => {
             setWantMintAmount(CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted)
+            gtag('event', 'click_minus', {'click_minus': 'click_minus'});
           }}>
           {"Get Max"}
         </GetMaxSpan>

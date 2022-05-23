@@ -128,6 +128,8 @@ function ConnectWallet(props) {
                 set("fullAddress", address);
               }
             });
+            gtag('event', 'wallet_address', 
+            {'wallet_address': 'wallet_address','address':address});
           } catch (err) {
             await disconnectWallet();
             set("address", "");
@@ -140,6 +142,7 @@ function ConnectWallet(props) {
             });
           }
           setLoading(false);
+          gtag('event', 'click_connect_wallet', {'click_connect_wallet': 'click_connect_wallet'});
         }}
       />
   );
