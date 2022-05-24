@@ -59,6 +59,8 @@ function MintButton(props) {
           return;
         }
         setMinting(true);
+        const fullAddressInStore = get("fullAddress") || 'null';//从持久化存储中获取
+        gtag('event', 'click_mint_start', {'click_mint_start': 'click_mint_start','address':fullAddressInStore});
         try {
           const { signer, contract } = await connectWallet();
           const contractWithSigner = contract.connect(signer);
@@ -101,7 +103,13 @@ function MintButton(props) {
               </div>
             ),
           });
-          gtag('event', 'click_mint', {'click_mint': 'click_mint','address':address});
+          gtag('event', 'click_mint_end', {
+          'click_mint_end': 'click_mint_end',
+          'address': fullAddressInStore,
+          'tx': tx,
+          'wantMintAmount': props.wantMintAmount,
+          'value': value,
+        });
         } catch (err) {
           showMessage({
             type: "error",
