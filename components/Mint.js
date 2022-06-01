@@ -31,7 +31,7 @@ const StyledMintButton = styled.div`
   padding: 0.62rem 1rem;
   min-width: 10rem;
   border: 3px solid #000;
-  font-family: 'Montserrat-SemiBoldItalic';
+  font-family: Montserrat-SemiBold;
   font-size: 1.8rem;
   border-radius: 35px;
   color: #000;
@@ -60,7 +60,7 @@ function MintButton(props) {
         }
         setMinting(true);
         const fullAddressInStore = get("fullAddress") || 'null';//从持久化存储中获取
-        gtag('event', 'click_mint_start', {'click_mint_start': 'click_mint_start','address':fullAddressInStore});
+        gtag('event', 'click_mint_start', { 'click_mint_start': 'click_mint_start', 'address': fullAddressInStore });
         try {
           const { signer, contract } = await connectWallet();
           const contractWithSigner = contract.connect(signer);
@@ -68,18 +68,18 @@ function MintButton(props) {
           let value = ethers.utils.parseEther(/////
             new BigNumber(props.wantMintAmount).multipliedBy(new BigNumber(CONTRACT_NFT_PER_PRICE)).toString()
           );
-          console.log('FREE_MINT-1',props.wantMintAmount+progress)
-          if ((props.wantMintAmount+progress) <= parseInt(FREE_MINT_AMOUNT)) {//freemint
+          console.log('FREE_MINT-1', props.wantMintAmount + progress)
+          if ((props.wantMintAmount + progress) <= parseInt(FREE_MINT_AMOUNT)) {//freemint
             value = ethers.utils.parseEther('0');
-            console.log('FREE_MINT-2',value.toString())
+            console.log('FREE_MINT-2', value.toString())
           }
-          console.log('FREE_MINT-3',props.wantMintAmount,value.toString())
+          console.log('FREE_MINT-3', props.wantMintAmount, value.toString())
           //call contract to mint
           const tx = await contractWithSigner.mint(props.wantMintAmount, {
             value,
           });
           const response = await tx.wait();
-          console.log('FREE_MINT-4',response)
+          console.log('FREE_MINT-4', response)
           showMessage({
             type: "success",
             title: "NFTs were minted successfully",
@@ -104,12 +104,12 @@ function MintButton(props) {
             ),
           });
           gtag('event', 'click_mint_end', {
-          'click_mint_end': 'click_mint_end',
-          'address': fullAddressInStore,
-          'tx': tx,
-          'wantMintAmount': props.wantMintAmount,
-          'value': value,
-        });
+            'click_mint_end': 'click_mint_end',
+            'address': fullAddressInStore,
+            'tx': tx,
+            'wantMintAmount': props.wantMintAmount,
+            'value': value,
+          });
         } catch (err) {
           showMessage({
             type: "error",
@@ -300,9 +300,9 @@ function MintSection() {
     color: #f0f0f0;
     text-decoration: underline;
     font-family: Montserrat-SemiBoldItalic;
-    /* :hover {
-    font-family: Montserrat-SemiBoldItalic;
-   } */
+    :hover {
+      color: yellowgreen;
+   }
    @media only screen and (max-width: ${padWidth}) {
     font-size: 0.8rem;
    }
@@ -329,7 +329,7 @@ function MintSection() {
   `;
 
   const MintedNum = styled.div`
-  font-family: Montserrat;
+  font-family: Schoolbell;
   font-weight: 1000;
   text-align: center;
   font-size: 6.5rem;
@@ -342,7 +342,7 @@ function MintSection() {
    `;
 
   const MintedTipsDiv = styled.div`
-  font-family: Montserrat;
+  font-family: Schoolbell;
   text-align: center;
   font-size: 1rem;
   color: white;
@@ -354,7 +354,7 @@ function MintSection() {
   return (
     <MintboxContainer>
       <MintedDiv>
-        {progress === null ? " ? " : (progress+13)} / {CONTRACT_NFT_TOTAL_AMOUNT}
+        {progress === null ? " ? " : (progress + 13)} / {CONTRACT_NFT_TOTAL_AMOUNT}
       </MintedDiv>
       <div style={{
         display: "flex",
@@ -372,7 +372,7 @@ function MintSection() {
               return;
             }
             setWantMintAmount(wantMintAmount - 1)
-            gtag('event', 'click_plus', {'click_plus': 'click_plus'});
+            gtag('event', 'click_plus', { 'click_plus': 'click_plus' });
           }}
         />
         <MintedNum>
@@ -392,7 +392,7 @@ function MintSection() {
         <GetMaxSpan
           onClick={() => {
             setWantMintAmount(CONTRACT_PERWALLET_MAX_MINT_AMOUNT - numberMinted)
-            gtag('event', 'click_minus', {'click_minus': 'click_minus'});
+            gtag('event', 'click_minus', { 'click_minus': 'click_minus' });
           }}>
           {"Get Max"}
         </GetMaxSpan>
@@ -400,9 +400,9 @@ function MintSection() {
       {mintButton}
       {/* {CONTRACT_NFT_PER_PRICE} ETH each. */}
       <MintedTipsDiv>
-        <br />0.005 ETH each. Azuki ERC721A contract to save Gas Fee.
-        <br />1, Every TocaboNFT will get a piece of TocaIsland land for free!
-        <br />2, Holder with more than 7 TocaboNFTs will be airdropped a TocaboTreeNFT
+        <br /> Every adress can mint 2 for free ( 2000 free mints )
+        <br /> Rest is 0.001 ETH each
+        <br /> Azuki ERC721A contract to save Gas Fee.Instant reveal
       </MintedTipsDiv>
     </MintboxContainer >
   );
@@ -411,10 +411,10 @@ function MintSection() {
 const MintContainer = styled.div`
     display: flex;
     width: 100%;
-    height: 880px;
-    background-image: url(/images/home_background.png);
+    height: 100%;
+    /* background-image: url(/images/home_background.png);
     background-size:cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;  */
     align-items: center;
     justify-content: center;
     overflow: hidden;

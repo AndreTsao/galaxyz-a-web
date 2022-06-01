@@ -17,4 +17,8 @@
 @font-face {
     font-family: 'Montserrat-Italic';
     src: url("../static/Montserrat-Italic.ttf");
-}  
+}
+@font-face {
+  font-family: 'Schoolbell';
+  src: url("../static/Schoolbell-Regular.ttf");
+}   

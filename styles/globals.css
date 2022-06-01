@@ -1,8 +1,15 @@
-html,
+html {
+  background: url(/images/background.webp) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: black;
+}
+
 body {
   padding: 0;
   margin: 0;
-  background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
     Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei,
     sans-serif;

@@ -94,12 +94,12 @@ function Intro() {
             }}
             src="favicon.png"
           />TocaIsland</div>
-        <MenuWrapper>
+        {/* <MenuWrapper>
           <MenuItem elementId="about">About</MenuItem>
           <MenuItem elementId="gallery">Gallery</MenuItem>
           <MenuItem elementId="roadmap">Roadmap</MenuItem>
           <MenuItem elementId="faq">F.A.Q</MenuItem>
-        </MenuWrapper>
+        </MenuWrapper> */}
        <div style={{display: 'flex', alignItems:'center'}}>
        <ConnectWallet showCollect={true} />
         <Tooltip title="Twitter">

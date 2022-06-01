@@ -20,7 +20,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{ display: "flex", width: '100%', flexDirection: "column", alignItems: "center", paddingBottom: '40px' }}>
+    <div style={{ 
+      display: "flex", 
+      width: '100%', 
+      flexDirection: "column", 
+      alignItems: "center",
+      paddingBottom: '40px',
+       }}>
       <Head>
         <title>TocaIsland - Enter metaverse </title>
         <meta charset="utf-8" />
@@ -49,11 +55,11 @@ export default function Home() {
       </Head>
       <Intro />
       <Mint />
-      <About />
+      {/* <About />
       <Gallery />
       <Roadmap />
       <FAQ />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
