@@ -1,15 +1,13 @@
-# 欢迎来到国产良心 NFT 代码仓库
+# 欢迎来到TocaIsland NFT 前端代码仓库
 
 并非最佳实践，如果你有更好的建议或者代码优化，请提交 Issue 或者 PR。
-
-公安提醒：本项目仅做学习和测试使用，请勿使用本项目做任何违法以及没良心的事情，天网恢恢疏而不漏！警察同志，这是开源项目，免费的不限制使用目的，使用者的一切行为均与开源者无关，谢谢。
 
 ## 跑起来项目
 
 先将 `.env.sample` 复制改名为 `.env` 然后将里面内容进行修改。之后运行下面命令：
 
 ```
-git clone https://github.com/brucexu-eth/gclx-official.git
+git clone https://github.com/JetCyC/galaxyz-a-web.git
 cd gclxnft
 npm install
 npm run dev
@@ -36,18 +34,3 @@ npm run dev
 - 国际化首推 [LinguiJS](https://lingui.js.org/)，跟 React.js、Next.js 等配合的都比较好。
 - 视差滚动特效首推 [react-scroll-parallax](https://jscottsmith.github.io/react-scroll-parallax-examples/examples/parallax-example/)，都是 MIT 协议。
 
-## TODO
-
-本项目仍然有一些地方可以优化，但是没有做，有时间有需求有捐赠再说吧：
-
-- [ ] ARIA 用户可访问性优化
-- [ ] I18N 国际化和语言切换功能
-- [ ] 视差滚动等特效 Demo
-
-## 关于作者 Bruce Xu
-
-多年经验程序员 / Web3 要饭人，欢迎关注推特：<https://twitter.com/brucexu_eth>。
-
-![](/public/icons/yaofan.jpg)
-
-如果你在这个项目收获了很多，比如拿去做外包赚了不少钱，求求你行行好，捐赠一点 ETH 给我吧。你要是富豪，喜欢我的作品，也可以捐赠。捐赠地址：brucexu.eth，说不定未来突然发现多了什么空投呢。
