@@ -8,7 +8,7 @@
 
 ```
 git clone https://github.com/JetCyC/galaxyz-a-web.git
-cd gclxnft
+cd galaxyz-a-web
 npm install
 npm run dev
 ```
